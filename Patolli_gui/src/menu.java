@@ -11,7 +11,6 @@ public class menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         btnCrearPartida = new javax.swing.JButton();
         btnUnirsePartida = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -19,9 +18,6 @@ public class menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setText("FIERRO");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, -1, -1));
 
         btnCrearPartida.setBackground(new java.awt.Color(0, 0, 0));
         btnCrearPartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_crearpartida1.png"))); // NOI18N
@@ -35,9 +31,9 @@ public class menu extends javax.swing.JFrame {
         getContentPane().add(btnCrearPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 170, 80));
 
         btnUnirsePartida.setBackground(new java.awt.Color(0, 0, 0));
-        btnUnirsePartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_crearpartida1.png"))); // NOI18N
+        btnUnirsePartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_unirsepartida1.png"))); // NOI18N
         btnUnirsePartida.setContentAreaFilled(false);
-        btnUnirsePartida.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_crearpartida2.png"))); // NOI18N
+        btnUnirsePartida.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_unirsepartida2.png"))); // NOI18N
         btnUnirsePartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUnirsePartidaActionPerformed(evt);
@@ -95,6 +91,5 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JButton btnCrearPartida;
     private javax.swing.JButton btnUnirsePartida;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
