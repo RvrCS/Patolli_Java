@@ -12,11 +12,13 @@ public class menu extends javax.swing.JFrame {
     private void initComponents() {
 
         btnCrearPartida = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
         btnUnirsePartida = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnCrearPartida.setBackground(new java.awt.Color(0, 0, 0));
@@ -28,7 +30,18 @@ public class menu extends javax.swing.JFrame {
                 btnCrearPartidaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCrearPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 170, 80));
+        getContentPane().add(btnCrearPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 170, 80));
+
+        btnSalir.setBackground(new java.awt.Color(0, 0, 0));
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_salir1.png"))); // NOI18N
+        btnSalir.setContentAreaFilled(false);
+        btnSalir.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_salir2.png"))); // NOI18N
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 170, 80));
 
         btnUnirsePartida.setBackground(new java.awt.Color(0, 0, 0));
         btnUnirsePartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_unirsepartida1.png"))); // NOI18N
@@ -39,12 +52,13 @@ public class menu extends javax.swing.JFrame {
                 btnUnirsePartidaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnUnirsePartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 170, 80));
+        getContentPane().add(btnUnirsePartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 170, 80));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_menu.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 400));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPartidaActionPerformed
@@ -54,6 +68,10 @@ public class menu extends javax.swing.JFrame {
     private void btnUnirsePartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUnirsePartidaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnUnirsePartidaActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalirActionPerformed
 
 	public static void main(String args[]) {
 		/* Set the Nimbus look and feel */
@@ -89,6 +107,7 @@ public class menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCrearPartida;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnUnirsePartida;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
