@@ -2,9 +2,10 @@
 import javax.swing.ImageIcon;
 
 public class menu extends javax.swing.JFrame {
-	
+	crearPartida crear;
 	public menu() {
 		initComponents();
+		crear = new crearPartida(this);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -62,7 +63,8 @@ public class menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPartidaActionPerformed
-        // TODO add your handling code here:
+		this.crear.setVisible(true);
+		this.setVisible(false);
     }//GEN-LAST:event_btnCrearPartidaActionPerformed
 
     private void btnUnirsePartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUnirsePartidaActionPerformed
@@ -70,7 +72,7 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnUnirsePartidaActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        // TODO add your handling code here:
+		System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
 
 	public static void main(String args[]) {
