@@ -1,8 +1,13 @@
+
+import javax.xml.bind.ParseConversionEvent;
+
 public class crearPartida extends javax.swing.JFrame {
 	menu m;
+	ventanaTablero ventana;
 	public crearPartida(menu m) {
 		initComponents();
 		this.m=m;
+		ventana = new ventanaTablero();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -78,6 +83,11 @@ public class crearPartida extends javax.swing.JFrame {
         btnMasCasillas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_mas1.png"))); // NOI18N
         btnMasCasillas.setContentAreaFilled(false);
         btnMasCasillas.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_mas2.png"))); // NOI18N
+        btnMasCasillas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMasCasillasActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnMasCasillas, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 80, 90));
 
         btnMenosCasillas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_menos1.png"))); // NOI18N
@@ -135,13 +145,17 @@ public class crearPartida extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
-
+		ventana.setVisible(true);
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
 		m.setVisible(true);
 		this.setVisible(false);
     }//GEN-LAST:event_btnAtrasActionPerformed
+
+    private void btnMasCasillasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasCasillasActionPerformed
+		
+    }//GEN-LAST:event_btnMasCasillasActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
