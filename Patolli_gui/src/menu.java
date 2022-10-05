@@ -23,39 +23,39 @@ public class menu extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnCrearPartida.setBackground(new java.awt.Color(0, 0, 0));
-        btnCrearPartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_crearpartida1.png"))); // NOI18N
+        btnCrearPartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_CrearPartida.png"))); // NOI18N
         btnCrearPartida.setContentAreaFilled(false);
-        btnCrearPartida.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_crearpartida2.png"))); // NOI18N
+        btnCrearPartida.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_CrearPartida2.png"))); // NOI18N
         btnCrearPartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCrearPartidaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCrearPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 170, 80));
+        getContentPane().add(btnCrearPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 170, 80));
 
         btnSalir.setBackground(new java.awt.Color(0, 0, 0));
-        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_salir1.png"))); // NOI18N
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_Salir1.png"))); // NOI18N
         btnSalir.setContentAreaFilled(false);
-        btnSalir.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_salir2.png"))); // NOI18N
+        btnSalir.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_Salir2.png"))); // NOI18N
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 170, 80));
+        getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 170, 80));
 
         btnUnirsePartida.setBackground(new java.awt.Color(0, 0, 0));
-        btnUnirsePartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_unirsepartida1.png"))); // NOI18N
+        btnUnirsePartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_UnirseApartida.png"))); // NOI18N
         btnUnirsePartida.setContentAreaFilled(false);
-        btnUnirsePartida.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_unirsepartida2.png"))); // NOI18N
+        btnUnirsePartida.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_UnirseApartida2.png"))); // NOI18N
         btnUnirsePartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUnirsePartidaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnUnirsePartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 170, 80));
+        getContentPane().add(btnUnirsePartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 170, 80));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_menu.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Patolli_Fondoo.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 400));
 
         pack();

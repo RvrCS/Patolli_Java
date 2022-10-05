@@ -33,11 +33,11 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/boton_crearpartida1.png"/>
+          <Image iconType="3" name="/imagenes/btn_CrearPartida.png"/>
         </Property>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/boton_crearpartida2.png"/>
+          <Image iconType="3" name="/imagenes/btn_CrearPartida2.png"/>
         </Property>
       </Properties>
       <Events>
@@ -45,7 +45,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="320" y="130" width="170" height="80"/>
+          <AbsoluteConstraints x="320" y="150" width="170" height="80"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -55,11 +55,11 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/boton_salir1.png"/>
+          <Image iconType="3" name="/imagenes/btn_Salir1.png"/>
         </Property>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/boton_salir2.png"/>
+          <Image iconType="3" name="/imagenes/btn_Salir2.png"/>
         </Property>
       </Properties>
       <Events>
@@ -67,7 +67,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="320" y="290" width="170" height="80"/>
+          <AbsoluteConstraints x="320" y="310" width="170" height="80"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -77,11 +77,11 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/boton_unirsepartida1.png"/>
+          <Image iconType="3" name="/imagenes/btn_UnirseApartida.png"/>
         </Property>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/boton_unirsepartida2.png"/>
+          <Image iconType="3" name="/imagenes/btn_UnirseApartida2.png"/>
         </Property>
       </Properties>
       <Events>
@@ -89,14 +89,14 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="320" y="210" width="170" height="80"/>
+          <AbsoluteConstraints x="320" y="230" width="170" height="80"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/fondo_menu.png"/>
+          <Image iconType="3" name="/imagenes/Patolli_Fondoo.png"/>
         </Property>
       </Properties>
       <Constraints>
