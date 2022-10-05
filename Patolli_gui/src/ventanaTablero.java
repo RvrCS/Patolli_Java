@@ -1,12 +1,11 @@
-
-
-import DibujoTablero.tableroCanvas;
+import dibujado.tableroCanvas;
 import entidades.Tablero;
+import java.awt.Dimension;
 import javax.swing.JFrame;
 
 public class ventanaTablero extends javax.swing.JFrame {
 	private tableroCanvas tbCanvas;
-	private int numCasillasAspa = 14;
+	private int numCasillasAspa = 12;
 	Tablero tablero = new Tablero();
 	
 	public ventanaTablero() {
@@ -15,9 +14,8 @@ public class ventanaTablero extends javax.swing.JFrame {
 	}
 	
 	protected void adaptarPantalla(){
-		int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
-		int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
-		this.setBounds((ancho / 2) - (this.getWidth() / 2), (alto / 2) - (this.getHeight() / 2), this.getWidth(),this.getHeight() );
+		Dimension dim=super.getToolkit().getScreenSize();
+		this.setSize(dim);
 	}
 	
 	private void extenderPantalla() {
@@ -25,13 +23,15 @@ public class ventanaTablero extends javax.swing.JFrame {
 	}
 	
 	private void inicializar() {
-		//adaptarPantalla();
-		//extenderPantalla();
+		adaptarPantalla();
+		extenderPantalla();
 		
 		tbCanvas = new tableroCanvas(tablero.getCasillas(), this.numCasillasAspa, this.getSize().width);
 		tablero.setCasillas(tbCanvas.generarCasillas());
+		
 		tbCanvas.setSize(this.getWidth(), this.numCasillasAspa * 50 + (50 * 5));
-		tbCanvas.setLocation(325, 100);
+		Dimension dim=super.getToolkit().getScreenSize();
+		tbCanvas.setLocation((int)dim.getWidth()/4, (int)dim.getHeight()/6);
 		
 		this.add(tbCanvas);
 		pintarTablero();
