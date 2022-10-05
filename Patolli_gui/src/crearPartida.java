@@ -16,7 +16,6 @@ public class crearPartida extends javax.swing.JFrame {
 
         btnConfirmar = new javax.swing.JButton();
         btnAtras = new javax.swing.JButton();
-        lbCasilla = new javax.swing.JLabel();
         lbFondoApuesta = new javax.swing.JLabel();
         lblNumeroJugador = new javax.swing.JLabel();
         lbMontoApuesta = new javax.swing.JLabel();
@@ -33,112 +32,134 @@ public class crearPartida extends javax.swing.JFrame {
         btnMenosFondoApuesta = new javax.swing.JButton();
         btnMasFondoApuesta = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
+        lbMontoApuesta1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnConfirmar.setBackground(new java.awt.Color(0, 0, 0));
-        btnConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_confirmar1.png"))); // NOI18N
+        btnConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_Confirmar.png"))); // NOI18N
         btnConfirmar.setContentAreaFilled(false);
-        btnConfirmar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_confirmar2.png"))); // NOI18N
+        btnConfirmar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_Confirmar_2.png"))); // NOI18N
         btnConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConfirmarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnConfirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 170, 80));
+        getContentPane().add(btnConfirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 320, 170, 80));
 
         btnAtras.setBackground(new java.awt.Color(0, 0, 0));
-        btnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_atras1.png"))); // NOI18N
+        btnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_Atrass.png"))); // NOI18N
         btnAtras.setContentAreaFilled(false);
-        btnAtras.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_atras2.png"))); // NOI18N
+        btnAtras.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn-atras--2.png"))); // NOI18N
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAtrasActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 170, 80));
-
-        lbCasilla.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
-        lbCasilla.setForeground(new java.awt.Color(255, 255, 0));
-        lbCasilla.setText("0");
-        getContentPane().add(lbCasilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, -1, -1));
+        getContentPane().add(btnAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 170, 80));
 
         lbFondoApuesta.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         lbFondoApuesta.setForeground(new java.awt.Color(255, 255, 0));
-        lbFondoApuesta.setText("0");
         getContentPane().add(lbFondoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, -1, -1));
 
         lblNumeroJugador.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         lblNumeroJugador.setForeground(new java.awt.Color(255, 255, 0));
-        lblNumeroJugador.setText("0");
         getContentPane().add(lblNumeroJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 150, -1, -1));
 
         lbMontoApuesta.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         lbMontoApuesta.setForeground(new java.awt.Color(255, 255, 0));
-        lbMontoApuesta.setText("0");
-        getContentPane().add(lbMontoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, -1, -1));
+        getContentPane().add(lbMontoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, -1, -1));
 
-        btnMasCasillas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_mas1.png"))); // NOI18N
+        btnMasCasillas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton--mas.png"))); // NOI18N
         btnMasCasillas.setContentAreaFilled(false);
-        btnMasCasillas.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_mas2.png"))); // NOI18N
+        btnMasCasillas.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton--mas2.png"))); // NOI18N
         btnMasCasillas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMasCasillasActionPerformed(evt);
             }
         });
-        getContentPane().add(btnMasCasillas, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 80, 90));
+        getContentPane().add(btnMasCasillas, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 110, 80, 90));
 
-        btnMenosCasillas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_menos1.png"))); // NOI18N
+        btnMenosCasillas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn--menos.png"))); // NOI18N
         btnMenosCasillas.setContentAreaFilled(false);
-        btnMenosCasillas.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_menos2.png"))); // NOI18N
-        getContentPane().add(btnMenosCasillas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 80, 90));
+        btnMenosCasillas.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn--menos2.png"))); // NOI18N
+        getContentPane().add(btnMenosCasillas, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 110, 90));
 
-        lbNumeroCasillas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/texto_dato.png"))); // NOI18N
-        getContentPane().add(lbNumeroCasillas, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 170, -1));
+        lbNumeroCasillas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/text_Aspas.png"))); // NOI18N
+        getContentPane().add(lbNumeroCasillas, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 170, 40));
 
-        btnMenosJugador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_menos1.png"))); // NOI18N
+        btnMenosJugador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn--menos.png"))); // NOI18N
         btnMenosJugador.setContentAreaFilled(false);
-        btnMenosJugador.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_menos2.png"))); // NOI18N
-        getContentPane().add(btnMenosJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 80, 90));
+        btnMenosJugador.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn--menos2.png"))); // NOI18N
+        getContentPane().add(btnMenosJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 110, 80, 90));
 
-        lbNumeroJugador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/texto_dato.png"))); // NOI18N
-        getContentPane().add(lbNumeroJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 150, 170, -1));
+        lbNumeroJugador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/text_Aspas.png"))); // NOI18N
+        getContentPane().add(lbNumeroJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 130, 170, -1));
 
-        btnMasJugador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_mas1.png"))); // NOI18N
+        btnMasJugador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton--mas.png"))); // NOI18N
         btnMasJugador.setContentAreaFilled(false);
-        btnMasJugador.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_mas2.png"))); // NOI18N
-        getContentPane().add(btnMasJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 140, 80, 90));
+        btnMasJugador.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton--mas2.png"))); // NOI18N
+        getContentPane().add(btnMasJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 80, 90));
 
-        btnMenosMontoApuesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_menos1.png"))); // NOI18N
+        btnMenosMontoApuesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn--menos.png"))); // NOI18N
         btnMenosMontoApuesta.setContentAreaFilled(false);
-        btnMenosMontoApuesta.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_menos2.png"))); // NOI18N
-        getContentPane().add(btnMenosMontoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, 80, 90));
+        btnMenosMontoApuesta.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn--menos2.png"))); // NOI18N
+        getContentPane().add(btnMenosMontoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 230, 80, 90));
 
-        lbNumeroMontoApuesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/texto_dato.png"))); // NOI18N
-        getContentPane().add(lbNumeroMontoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, 170, -1));
+        lbNumeroMontoApuesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/text_Aspas.png"))); // NOI18N
+        getContentPane().add(lbNumeroMontoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 170, -1));
 
-        btnMasMontoApuesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_mas1.png"))); // NOI18N
+        btnMasMontoApuesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton--mas.png"))); // NOI18N
         btnMasMontoApuesta.setContentAreaFilled(false);
-        btnMasMontoApuesta.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_mas2.png"))); // NOI18N
-        getContentPane().add(btnMasMontoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 280, 80, 90));
+        btnMasMontoApuesta.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton--mas2.png"))); // NOI18N
+        getContentPane().add(btnMasMontoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 80, 90));
 
-        lbNumeroFondoApuesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/texto_dato.png"))); // NOI18N
-        getContentPane().add(lbNumeroFondoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 170, -1));
+        lbNumeroFondoApuesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/text_Aspas.png"))); // NOI18N
+        getContentPane().add(lbNumeroFondoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 170, -1));
 
-        btnMenosFondoApuesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_menos1.png"))); // NOI18N
+        btnMenosFondoApuesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn--menos.png"))); // NOI18N
         btnMenosFondoApuesta.setContentAreaFilled(false);
-        btnMenosFondoApuesta.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_menos2.png"))); // NOI18N
-        getContentPane().add(btnMenosFondoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 80, 90));
+        btnMenosFondoApuesta.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn--menos2.png"))); // NOI18N
+        getContentPane().add(btnMenosFondoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 80, 90));
 
-        btnMasFondoApuesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_mas1.png"))); // NOI18N
+        btnMasFondoApuesta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton--mas.png"))); // NOI18N
         btnMasFondoApuesta.setContentAreaFilled(false);
-        btnMasFondoApuesta.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_mas2.png"))); // NOI18N
-        getContentPane().add(btnMasFondoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 80, 90));
+        btnMasFondoApuesta.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton--mas2.png"))); // NOI18N
+        getContentPane().add(btnMasFondoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 80, 90));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_crear_partida.png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_CrearPartida.png"))); // NOI18N
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 400));
+
+        lbMontoApuesta1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        lbMontoApuesta1.setForeground(new java.awt.Color(255, 255, 0));
+        lbMontoApuesta1.setText("0");
+        getContentPane().add(lbMontoApuesta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, -1, -1));
+
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, -1, -1));
+
+        jTextField1.setText("jTextField1");
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, -1, -1));
+
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, -1, -1));
+
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, -1, -1));
+
+        jLabel4.setText("jLabel4");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, -1, -1));
+
+        jFormattedTextField1.setText("jFormattedTextField1");
+        getContentPane().add(jFormattedTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -170,9 +191,15 @@ public class crearPartida extends javax.swing.JFrame {
     private javax.swing.JButton btnMenosJugador;
     private javax.swing.JButton btnMenosMontoApuesta;
     private javax.swing.JLabel fondo;
-    private javax.swing.JLabel lbCasilla;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lbFondoApuesta;
     private javax.swing.JLabel lbMontoApuesta;
+    private javax.swing.JLabel lbMontoApuesta1;
     private javax.swing.JLabel lbNumeroCasillas;
     private javax.swing.JLabel lbNumeroFondoApuesta;
     private javax.swing.JLabel lbNumeroJugador;
