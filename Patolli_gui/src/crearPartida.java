@@ -98,13 +98,11 @@ public class crearPartida extends javax.swing.JFrame {
         getContentPane().add(btnMenosCasillas, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 80, 90));
 
         lbValorCasilla.setFont(new java.awt.Font("Dialog", 1, 42)); // NOI18N
-        lbValorCasilla.setForeground(new java.awt.Color(0, 0, 0));
         lbValorCasilla.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbValorCasilla.setText("0");
         getContentPane().add(lbValorCasilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 150, 40));
 
         lbValorFondo.setFont(new java.awt.Font("Dialog", 1, 42)); // NOI18N
-        lbValorFondo.setForeground(new java.awt.Color(0, 0, 0));
         lbValorFondo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbValorFondo.setText("0");
         getContentPane().add(lbValorFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 150, 40));
@@ -113,13 +111,11 @@ public class crearPartida extends javax.swing.JFrame {
         getContentPane().add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 170, 40));
 
         lbNumJugador.setFont(new java.awt.Font("Dialog", 1, 42)); // NOI18N
-        lbNumJugador.setForeground(new java.awt.Color(0, 0, 0));
         lbNumJugador.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbNumJugador.setText("0");
         getContentPane().add(lbNumJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 130, 150, 40));
 
         lbMontoApuesta.setFont(new java.awt.Font("Dialog", 1, 42)); // NOI18N
-        lbMontoApuesta.setForeground(new java.awt.Color(0, 0, 0));
         lbMontoApuesta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbMontoApuesta.setText("0");
         getContentPane().add(lbMontoApuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 150, 40));
