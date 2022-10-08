@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 public class ventanaTablero extends javax.swing.JFrame {
 	private tableroCanvas tbCanvas;
 	private int numCasillasAspa = 12;
+	
 	Tablero tablero = new Tablero();
 	
 	public ventanaTablero() {
