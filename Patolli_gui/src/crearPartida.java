@@ -17,7 +17,7 @@ public class crearPartida extends javax.swing.JFrame {
 		this.lbValorFondo.setText(String.valueOf(fondoApuesta));
 		this.lbMontoApuesta.setText(String.valueOf(montoApuesta));
 		this.m=m;
-		ventana = new ventanaTablero();
+		this.ventana = new ventanaTablero();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -203,6 +203,7 @@ public class crearPartida extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
+	this.setVisible(false);
 	ventana.setVisible(true);
     }//GEN-LAST:event_btnConfirmarActionPerformed
 

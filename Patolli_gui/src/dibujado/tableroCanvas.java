@@ -26,7 +26,7 @@ public class tableroCanvas extends JPanel{
 	public tableroCanvas(LinkedList<Casilla> casillas, int numCasillasAspa, int anchoPantalla) {
 		this.casillas = casillas;
 		this.numCasillasAspa = numCasillasAspa;
-		this.anchoPantalla=anchoPantalla/4;
+		this.anchoPantalla=anchoPantalla/6;
 //		this.ancho = casillas.size() * 50 + 50 * 3;
 //		this.alto=ancho;
 		inicializar();
@@ -307,7 +307,7 @@ public class tableroCanvas extends JPanel{
 				triangulo = new Polygon(new int[]{x + (TAMANIOCASILLA/20), x+(TAMANIOCASILLA/2), x + (TAMANIOCASILLA/2) * 2}, new int[]{y, y + TAMANIOCASILLA, y}, 3);
 				break;
 			case LEFT_BOTTOM:
-				triangulo = new Polygon(new int[]{x + (TAMANIOCASILLA/20),  x+(TAMANIOCASILLA/2), x + (TAMANIOCASILLA/2) * 2}, new int[]{y + TAMANIOCASILLA, y, y + (TAMANIOCASILLA)}, 3);
+				triangulo = new Polygon(new int[]{x + (TAMANIOCASILLA/20),  x+(TAMANIOCASILLA/2), x + (TAMANIOCASILLA/2) * 2}, new int[]{y + TAMANIOCASILLA, y +2, y + TAMANIOCASILLA}, 3);
 				break;
 			case BOTTOM_LEFT:
 				triangulo = new Polygon(new int[]{x, x + TAMANIOCASILLA, x}, new int[]{y + (TAMANIOCASILLA/ 20), y +(TAMANIOCASILLA/2), y + (TAMANIOCASILLA/ 2) * 2}, 3);
@@ -316,7 +316,7 @@ public class tableroCanvas extends JPanel{
 				triangulo = new Polygon(new int[]{x + TAMANIOCASILLA, x, x + TAMANIOCASILLA}, new int[]{y + (TAMANIOCASILLA / 20), y+(TAMANIOCASILLA/2), y + (TAMANIOCASILLA / 2) * 2}, 3);
 				break;
 			case RIGHT_BOTTOM:
-				triangulo = new Polygon(new int[]{x + (TAMANIOCASILLA / 20), x + (TAMANIOCASILLA/2), x + (TAMANIOCASILLA / 2) * 2}, new int[]{y + (TAMANIOCASILLA), y, y + (TAMANIOCASILLA)}, 3);
+				triangulo = new Polygon(new int[]{x + (TAMANIOCASILLA / 20), x + (TAMANIOCASILLA/2), x + (TAMANIOCASILLA / 2) * 2}, new int[]{y + (TAMANIOCASILLA), y+2, y + (TAMANIOCASILLA)}, 3);
 				break;
 			case RIGHT_TOP:
 				triangulo = new Polygon(new int[]{x + (TAMANIOCASILLA/ 20), x+ (TAMANIOCASILLA/2), x + (TAMANIOCASILLA/ 2)*2}, new int[]{y, y + TAMANIOCASILLA, y}, 3);

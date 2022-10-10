@@ -2,7 +2,9 @@
 import javax.swing.ImageIcon;
 
 public class menu extends javax.swing.JFrame {
+
 	crearPartida crear;
+
 	public menu() {
 		initComponents();
 		crear = new crearPartida(this);
@@ -68,7 +70,7 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCrearPartidaActionPerformed
 
     private void btnUnirsePartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUnirsePartidaActionPerformed
-        // TODO add your handling code here:
+		// TODO add your handling code here:
     }//GEN-LAST:event_btnUnirsePartidaActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed

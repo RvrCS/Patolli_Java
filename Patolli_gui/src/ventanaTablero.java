@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 
 public class ventanaTablero extends javax.swing.JFrame {
 	private tableroCanvas tbCanvas;
-	private int numCasillasAspa = 10;
+	private int numCasillasAspa = 14;
 	
 	Tablero tablero = new Tablero();
 	
@@ -27,7 +27,7 @@ public class ventanaTablero extends javax.swing.JFrame {
 //		adaptarPantalla();
 //		extenderPantalla();
 		
-		tbCanvas = new tableroCanvas(tablero.getCasillas(), this.numCasillasAspa, 1000);
+		tbCanvas = new tableroCanvas(tablero.getCasillas(), this.numCasillasAspa, this.getWidth());
 		tablero.setCasillas(tbCanvas.generarCasillas());
 		
 		tbCanvas.setSize(500, 400);
@@ -41,8 +41,7 @@ public class ventanaTablero extends javax.swing.JFrame {
 	private void pintarTablero() {
 		tbCanvas.setCasillas(tablero.getCasillas());
 		this.repaint();
-    }
-        
+	}
    
 @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
