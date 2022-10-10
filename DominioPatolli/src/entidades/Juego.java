@@ -3,48 +3,53 @@ package entidades;
 import java.util.List;
 
 public class Juego {
-    private Tablero tablero;
-    private int apuesta, fondoFijo;
-    private List<Jugador> jugadores;
 
-    public Juego(Tablero tablero, int apuesta, int fondoFijo, List<Jugador> jugadores) {
-        this.tablero = tablero;
-        this.apuesta = apuesta;
-        this.fondoFijo = fondoFijo;
-        this.jugadores = jugadores;
-    }
+	private Tablero tablero;
+	private int apuesta, fondoFijo,numCasillasAspa;
+	private List<Jugador> jugadores;
+	
+	
+	public Juego(Tablero tablero, int apuesta, int fondoFijo,int numCasillasAspa, List<Jugador> jugadores) {
+		this.tablero = tablero;
+		this.apuesta = apuesta;
+		this.fondoFijo = fondoFijo;
+		this.jugadores = jugadores;
+		this.numCasillasAspa = numCasillasAspa;
+	}
 
-    public Tablero getTablero() {
-        return tablero;
-    }
+	public Juego() {
+		this.tablero  = new Tablero();
+	}
 
-    public void setTablero(Tablero tablero) {
-        this.tablero = tablero;
-    }
+	public Tablero getTablero() {
+		return tablero;
+	}
 
-    public int getApuesta() {
-        return apuesta;
-    }
+	public void setTablero(Tablero tablero) {
+		this.tablero = tablero;
+	}
 
-    public void setApuesta(int apuesta) {
-        this.apuesta = apuesta;
-    }
+	public int getApuesta() {
+		return apuesta;
+	}
 
-    public int getFondoFijo() {
-        return fondoFijo;
-    }
+	public void setApuesta(int apuesta) {
+		this.apuesta = apuesta;
+	}
 
-    public void setFondoFijo(int fondoFijo) {
-        this.fondoFijo = fondoFijo;
-    }
+	public int getFondoFijo() {
+		return fondoFijo;
+	}
 
-    public List<Jugador> getJugadores() {
-        return jugadores;
-    }
+	public void setFondoFijo(int fondoFijo) {
+		this.fondoFijo = fondoFijo;
+	}
 
-    public void setJugadores(List<Jugador> jugadores) {
-        this.jugadores = jugadores;
-    }
-    
-    
+	public int getNumCasillasAspa() {
+		return numCasillasAspa;
+	}
+
+	public void setNumCasillasAspa(int numCasillasAspa) {
+		this.numCasillasAspa = numCasillasAspa;
+	}
 }

@@ -1,9 +1,11 @@
 
+import entidades.Juego;
 import javax.xml.bind.ParseConversionEvent;
 
 public class crearPartida extends javax.swing.JFrame {
 	menu m;
-	ventanaTablero ventana;
+	ventanaTablero ventana; 
+	Juego juego;
 	
 	int casilla = 12;
 	int jugadores= 2;
@@ -17,7 +19,8 @@ public class crearPartida extends javax.swing.JFrame {
 		this.lbValorFondo.setText(String.valueOf(fondoApuesta));
 		this.lbMontoApuesta.setText(String.valueOf(montoApuesta));
 		this.m=m;
-		this.ventana = new ventanaTablero();
+		this.ventana =  new ventanaTablero();
+		this.juego = new Juego();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -204,7 +207,14 @@ public class crearPartida extends javax.swing.JFrame {
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
 	this.setVisible(false);
+//	ventana.setNumCasillasAspa(Integer.parseInt(this.lbValorCasilla.getText()));
+	this.juego.setNumCasillasAspa(Integer.parseInt(this.lbValorCasilla.getText()));
+	this.juego.setFondoFijo(Integer.parseInt(this.lbValorFondo.getText()));
+	this.juego.setApuesta(Integer.parseInt(this.lbMontoApuesta.getText()));
+	
+	ventana.inicializar(this.juego);
 	ventana.setVisible(true);
+	
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
