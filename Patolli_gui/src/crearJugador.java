@@ -26,16 +26,59 @@ public class crearJugador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btn_Atras = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        btn_Confirmar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btn_Atras.setBackground(new java.awt.Color(255, 255, 255));
+        btn_Atras.setForeground(new java.awt.Color(255, 255, 255));
+        btn_Atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_Atrass.png"))); // NOI18N
+        btn_Atras.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn-atras--2.png"))); // NOI18N
+        btn_Atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_AtrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_Atras, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 330, -1, -1));
+
+        jTextField1.setBackground(new java.awt.Color(255, 0, 153));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 170, 40));
+
+        btn_Confirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_Confirmar.png"))); // NOI18N
+        btn_Confirmar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_Confirmar_2.png"))); // NOI18N
+        btn_Confirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ConfirmarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_Confirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 330, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_CrearPartida2.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void btn_AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AtrasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_AtrasActionPerformed
+
+    private void btn_ConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ConfirmarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_ConfirmarActionPerformed
 
 	/**
 	 * @param args the command line arguments
@@ -73,6 +116,9 @@ public class crearJugador extends javax.swing.JFrame {
 	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_Atras;
+    private javax.swing.JButton btn_Confirmar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
