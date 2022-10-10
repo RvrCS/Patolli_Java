@@ -1,18 +1,29 @@
 import dibujado.tableroCanvas;
+import entidades.Juego;
 import entidades.Tablero;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 
 public class ventanaTablero extends javax.swing.JFrame {
 	private tableroCanvas tbCanvas;
-	private int numCasillasAspa = 12;
+//	private int numCasillasAspa = 12;
+	private Juego juego;
+	
 	
 	Tablero tablero = new Tablero();
 	
 	public ventanaTablero() {
 		initComponents();
-		this.inicializar();
+//		this.inicializar();
 	}
+//
+//	public int getNumCasillasAspa() {
+//		return numCasillasAspa;
+//	}
+//
+//	public void setNumCasillasAspa(int numCasillasAspa) {
+//		this.numCasillasAspa = numCasillasAspa;
+//	}
 	
 	protected void adaptarPantalla(){
 		Dimension dim=super.getToolkit().getScreenSize();
@@ -23,16 +34,24 @@ public class ventanaTablero extends javax.swing.JFrame {
 		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 	}
 	
-	private void inicializar() {
-		adaptarPantalla();
-		extenderPantalla();
+	protected void inicializar(Juego juego) {
+//		adaptarPantalla();
+//		extenderPantalla();
+		this.juego = new Juego();
 		
-		tbCanvas = new tableroCanvas(tablero.getCasillas(), this.numCasillasAspa, this.getSize().width);
+		this.juego.setApuesta(juego.getApuesta());
+		this.juego.setFondoFijo(juego.getFondoFijo());
+		this.juego.setNumCasillasAspa(juego.getNumCasillasAspa());
+		
+		this.lbFondoApuesta.setText(this.juego.getFondoFijo()+"");
+		this.lbMontoApuesta.setText(this.juego.getApuesta()+"");
+		
+		tbCanvas = new tableroCanvas(tablero.getCasillas(), this.juego.getNumCasillasAspa(), this.getWidth());
 		tablero.setCasillas(tbCanvas.generarCasillas());
 		
-		tbCanvas.setSize(this.getWidth(), this.numCasillasAspa * 50 + (50 * 5));
+		tbCanvas.setSize(500, 400);
 		Dimension dim=super.getToolkit().getScreenSize();
-		tbCanvas.setLocation((int)dim.getWidth()/4, (int)dim.getHeight()/6);
+		tbCanvas.setLocation((int)dim.getWidth()/5, (int) dim.getHeight()/6);
 		
 		this.add(tbCanvas);
 		pintarTablero();
@@ -41,25 +60,60 @@ public class ventanaTablero extends javax.swing.JFrame {
 	private void pintarTablero() {
 		tbCanvas.setCasillas(tablero.getCasillas());
 		this.repaint();
-    }
-        
+	}
    
 @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        lbFondoApuesta = new javax.swing.JLabel();
+        lbMontoApuesta = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel1.setText("Fondo de apuesta");
+
+        lbFondoApuesta.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lbFondoApuesta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbFondoApuesta.setText("0");
+
+        lbMontoApuesta.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lbMontoApuesta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbMontoApuesta.setText("0");
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel2.setText("Monto por apuesta");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1500, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbFondoApuesta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lbMontoApuesta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(1024, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbFondoApuesta)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbMontoApuesta)
+                .addContainerGap(515, Short.MAX_VALUE))
         );
 
         pack();
@@ -67,5 +121,9 @@ public class ventanaTablero extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lbFondoApuesta;
+    private javax.swing.JLabel lbMontoApuesta;
     // End of variables declaration//GEN-END:variables
  }
