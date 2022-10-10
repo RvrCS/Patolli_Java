@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 
 public class ventanaTablero extends javax.swing.JFrame {
 	private tableroCanvas tbCanvas;
-	private int numCasillasAspa = 12;
+	private int numCasillasAspa = 10;
 	
 	Tablero tablero = new Tablero();
 	
@@ -24,15 +24,15 @@ public class ventanaTablero extends javax.swing.JFrame {
 	}
 	
 	private void inicializar() {
-		adaptarPantalla();
-		extenderPantalla();
+//		adaptarPantalla();
+//		extenderPantalla();
 		
-		tbCanvas = new tableroCanvas(tablero.getCasillas(), this.numCasillasAspa, this.getSize().width);
+		tbCanvas = new tableroCanvas(tablero.getCasillas(), this.numCasillasAspa, 1000);
 		tablero.setCasillas(tbCanvas.generarCasillas());
 		
-		tbCanvas.setSize(this.getWidth(), this.numCasillasAspa * 50 + (50 * 5));
+		tbCanvas.setSize(500, 400);
 		Dimension dim=super.getToolkit().getScreenSize();
-		tbCanvas.setLocation((int)dim.getWidth()/4, (int)dim.getHeight()/6);
+		tbCanvas.setLocation((int)dim.getWidth()/5, (int) dim.getHeight()/6);
 		
 		this.add(tbCanvas);
 		pintarTablero();
@@ -55,11 +55,11 @@ public class ventanaTablero extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1500, Short.MAX_VALUE)
+            .addGap(0, 1280, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGap(0, 720, Short.MAX_VALUE)
         );
 
         pack();
