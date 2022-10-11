@@ -6,7 +6,7 @@ import java.awt.Dimension;
 public class ventanaTablero extends javax.swing.JFrame {
 	private tableroCanvas tbCanvas;
 //	private int numCasillasAspa = 12;
-	private Juego juego;
+//	private Juego juego;
 	private static ventanaTablero singletonTablero;
 	
 	Tablero tablero = new Tablero();
@@ -26,30 +26,29 @@ public class ventanaTablero extends javax.swing.JFrame {
 
 	
 	
-	protected void inicializar(Juego juego) {
-		this.juego = new Juego();
+	protected void inicializar() {
 		
-		this.juego.setApuesta(juego.getApuesta());
-		this.juego.setFondoFijo(juego.getFondoFijo());
-		this.juego.setNumCasillasAspa(juego.getNumCasillasAspa());
+		this.lbFondoApuesta.setText(Juego.getInstance().getFondoFijo()+"");
+		this.lbMontoApuesta.setText(Juego.getInstance().getApuesta()+"");
 		
-		this.lbFondoApuesta.setText(this.juego.getFondoFijo()+"");
-		this.lbMontoApuesta.setText(this.juego.getApuesta()+"");
-		
-		tbCanvas = new tableroCanvas(tablero.getCasillas(), this.juego.getNumCasillasAspa(), this.getWidth());
+		tbCanvas = new tableroCanvas(tablero.getCasillas(),Juego.getInstance().getNumCasillasAspa(), this.getWidth());
 		tablero.setCasillas(tbCanvas.generarCasillas());
+		
+		Juego.getInstance().setTablero(tablero);
 		
 		tbCanvas.setSize(500, 400);
 		Dimension dim=super.getToolkit().getScreenSize();
 		tbCanvas.setLocation((int)dim.getWidth()/5, (int) dim.getHeight()/6);
-		
 		this.add(tbCanvas);
-		pintarTablero();
+//		pintarTablero();
 	} 
 
-	private void pintarTablero() {
-		tbCanvas.setCasillas(tablero.getCasillas());
+	public void pintarTablero() {
+		tbCanvas.setCasillas(Juego.getInstance().getTablero().getCasillas());
 		this.repaint();
+		for (int i = 0; i < Juego.getInstance().getListaJugador().size(); i++) {
+			System.out.println(Juego.getInstance().getListaJugador().get(i).getNombre());
+		}
 	}
    
 @SuppressWarnings("unchecked")
@@ -126,7 +125,8 @@ public class ventanaTablero extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-
+	menu.getInstance().setVisible(true);
+	this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -10,31 +10,32 @@ package entidades;
  * @author River
  */
 public class Jugador {
-    
-    private String nombre;
-    private int fondo;
 
-    public Jugador(String nombre, int fondo) {
-        this.nombre = nombre;
-        this.fondo = fondo;
-    }
+	private String nombre;
+	private int fondo;
 
-    public String getNombre() {
-        return nombre;
-    }
+	public Jugador(String nombre, int fondo) {
+		this.nombre = nombre;
+		this.fondo = fondo;
+	}
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+	public Jugador() {
+	}
 
-    public int getFondo() {
-        return fondo;
-    }
+	public String getNombre() {
+		return nombre;
+	}
 
-    public void setFondo(int fondo) {
-        this.fondo = fondo;
-    }
-    
-    
-    
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getFondo() {
+		return fondo;
+	}
+
+	public void setFondo(int fondo) {
+		this.fondo = fondo;
+	}
+
 }

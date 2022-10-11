@@ -3,9 +3,8 @@ import entidades.Juego;
 import javax.xml.bind.ParseConversionEvent;
 
 public class crearPartida extends javax.swing.JFrame {
-	menu m;
 	
-	Juego juego;
+//	Juego juego;
 	
 	int casilla = 12;
 	int jugadores= 2;
@@ -18,8 +17,7 @@ public class crearPartida extends javax.swing.JFrame {
 		this.lbNumJugador.setText(String.valueOf(jugadores));
 		this.lbValorFondo.setText(String.valueOf(fondoApuesta));
 		this.lbMontoApuesta.setText(String.valueOf(montoApuesta));
-		this.m=m;
-		this.juego = new Juego();
+//		this.juego = new Juego();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -207,19 +205,21 @@ public class crearPartida extends javax.swing.JFrame {
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
 	this.setVisible(false);
 //	ventana.setNumCasillasAspa(Integer.parseInt(this.lbValorCasilla.getText()));
-	this.juego.setNumCasillasAspa(Integer.parseInt(this.lbValorCasilla.getText()));
-	this.juego.setFondoFijo(Integer.parseInt(this.lbValorFondo.getText()));
-	this.juego.setApuesta(Integer.parseInt(this.lbMontoApuesta.getText()));
+	Juego.getInstance().setNumCasillasAspa(Integer.parseInt(this.lbValorCasilla.getText()));
+	Juego.getInstance().setFondoFijo(Integer.parseInt(this.lbValorFondo.getText()));
+	Juego.getInstance().setApuesta(Integer.parseInt(this.lbMontoApuesta.getText()));
 	
-        
-	ventanaTablero.getInstance().inicializar(this.juego);
-	ventanaTablero.getInstance().setVisible(true);
+	ventanaTablero.getInstance().inicializar();
+	
+	crearJugador.getInstance().setVisible(true);
+	
+//	ventanaTablero.getInstance().setVisible(true);
 	
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-	m.setVisible(true);
-	this.setVisible(false);
+//	m.setVisible(true);
+	this.dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnMasCasillasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasCasillasActionPerformed
