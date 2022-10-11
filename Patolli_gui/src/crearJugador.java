@@ -116,19 +116,19 @@ public class crearJugador extends javax.swing.JFrame {
 		ventanaTablero.getInstance().jLabel3.setText(Juego.getInstance().getListaJugador().get(0).getNombre());
 
 		
-		if (Juego.getInstance().getListaJugador().size()>contador) {
-			
-			if (Juego.getInstance().getListaJugador().get(1)!=null) {
-				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
-				contador++;
-			}
-			if (Juego.getInstance().getListaJugador().get(2)!=null) {
-				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
-			}
-			if (Juego.getInstance().getListaJugador().get(3)!=null) {
-				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
-			}
-		}
+//		if (Juego.getInstance().getListaJugador().size()>contador) {
+//			
+//			if (Juego.getInstance().getListaJugador().get(1)!=null) {
+//				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
+//				contador++;
+//			}
+//			if (Juego.getInstance().getListaJugador().get(2)!=null) {
+//				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
+//			}
+//			if (Juego.getInstance().getListaJugador().get(3)!=null) {
+//				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
+//			}
+//		}
 		
 		ventanaTablero.getInstance().setVisible(true);
 		
