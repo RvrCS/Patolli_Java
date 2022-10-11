@@ -9,7 +9,8 @@
  * @author joshi
  */
 public class crearJugador extends javax.swing.JFrame {
-
+    
+        crearPartida cP = new crearPartida();
 	/**
 	 * Creates new form crearJugador
 	 */
@@ -101,6 +102,7 @@ public class crearJugador extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -113,6 +115,13 @@ public class crearJugador extends javax.swing.JFrame {
 
     private void btn_ConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ConfirmarActionPerformed
         // TODO add your handling code here:
+        if(ventanaTablero.getInstance() != null){
+           cP.setVisible(true);
+           this.setVisible(false); 
+        }else{
+           ventanaTablero.getInstance().setVisible(true);
+           this.setVisible(false);
+        }
     }//GEN-LAST:event_btn_ConfirmarActionPerformed
 
 	/**

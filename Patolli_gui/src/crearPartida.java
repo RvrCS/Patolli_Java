@@ -4,7 +4,7 @@ import javax.xml.bind.ParseConversionEvent;
 
 public class crearPartida extends javax.swing.JFrame {
 	menu m;
-	ventanaTablero ventana; 
+	
 	Juego juego;
 	
 	int casilla = 12;
@@ -12,14 +12,13 @@ public class crearPartida extends javax.swing.JFrame {
 	int fondoApuesta = 10;
 	int montoApuesta = 1;
 	
-	public crearPartida(menu m) {
+	public crearPartida() {
 		initComponents();
 		this.lbValorCasilla.setText(String.valueOf(casilla));
 		this.lbNumJugador.setText(String.valueOf(jugadores));
 		this.lbValorFondo.setText(String.valueOf(fondoApuesta));
 		this.lbMontoApuesta.setText(String.valueOf(montoApuesta));
 		this.m=m;
-		this.ventana =  new ventanaTablero();
 		this.juego = new Juego();
 	}
 	
@@ -212,8 +211,9 @@ public class crearPartida extends javax.swing.JFrame {
 	this.juego.setFondoFijo(Integer.parseInt(this.lbValorFondo.getText()));
 	this.juego.setApuesta(Integer.parseInt(this.lbMontoApuesta.getText()));
 	
-	ventana.inicializar(this.juego);
-	ventana.setVisible(true);
+        
+	ventanaTablero.getInstance().inicializar(this.juego);
+	ventanaTablero.getInstance().setVisible(true);
 	
     }//GEN-LAST:event_btnConfirmarActionPerformed
 

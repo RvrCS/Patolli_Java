@@ -3,11 +3,18 @@ import javax.swing.ImageIcon;
 
 public class menu extends javax.swing.JFrame {
 
-	crearPartida crear;
+        crearJugador jugador;
+        private static menu singletonMenu;
+        
+        public static menu getInstance(){
+            if(singletonMenu == null)
+                singletonMenu = new menu();
+            return singletonMenu;
+        }
 
 	public menu() {
 		initComponents();
-		crear = new crearPartida(this);
+		jugador = new crearJugador();
 	}
 
 	@SuppressWarnings("unchecked")
@@ -65,12 +72,15 @@ public class menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPartidaActionPerformed
-		this.crear.setVisible(true);
+		this.jugador.setVisible(true);
 		this.setVisible(false);
+                
     }//GEN-LAST:event_btnCrearPartidaActionPerformed
 
     private void btnUnirsePartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUnirsePartidaActionPerformed
 		// TODO add your handling code here:
+                this.jugador.setVisible(true);
+                this.setVisible(false);
     }//GEN-LAST:event_btnUnirsePartidaActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
