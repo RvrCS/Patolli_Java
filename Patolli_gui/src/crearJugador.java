@@ -104,6 +104,8 @@ public class crearJugador extends javax.swing.JFrame {
 
     private void btn_ConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ConfirmarActionPerformed
         // TODO add your handling code here:
+		int contador= 0;
+		
 		Jugador jugador  = new Jugador();
 		jugador.setNombre(this.txtNombre.getText());
 		jugador.setFondo(Juego.getInstance().getFondoFijo());
@@ -111,6 +113,23 @@ public class crearJugador extends javax.swing.JFrame {
 		Juego.getInstance().addJugador(jugador);
 		
 		ventanaTablero.getInstance().pintarTablero();
+		ventanaTablero.getInstance().jLabel3.setText(Juego.getInstance().getListaJugador().get(0).getNombre());
+
+		
+		if (Juego.getInstance().getListaJugador().size()>contador) {
+			
+			if (Juego.getInstance().getListaJugador().get(1)!=null) {
+				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
+				contador++;
+			}
+			if (Juego.getInstance().getListaJugador().get(2)!=null) {
+				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
+			}
+			if (Juego.getInstance().getListaJugador().get(3)!=null) {
+				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
+			}
+		}
+		
 		ventanaTablero.getInstance().setVisible(true);
 		
 		this.txtNombre.setText("");
