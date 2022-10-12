@@ -20,11 +20,11 @@ public class tableroCanvas extends JPanel{
 	private int numCasillasAspa;
 	private int anchoPantalla;
 	private Graphics2D g2d;
-	protected  final int TAMANIOCASILLA = 25;
+	private  final int TAMANIOCASILLA = 25;
 	
 	
 	/**
-	 * Metodo constructor que recibe e instancia los valores  enviados
+	 * Método constructor que recibe e instancia los valores  enviados
 	 * @param casillas
 	 * @param numCasillasAspa
 	 * @param anchoPantalla 

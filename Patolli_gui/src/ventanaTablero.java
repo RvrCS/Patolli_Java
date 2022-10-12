@@ -25,7 +25,7 @@ public class ventanaTablero extends javax.swing.JFrame {
 	/**
 	 * Metodo que inicializa el tablero estableciando medidas y generando las casillas
 	 */
-	protected void inicializar() {
+	public void inicializar() {
 		
 		this.lbMontoApuesta.setText(Juego.getInstance().getApuesta()+"");
 		this.lbFondoApuestaJg1.setText(Juego.getInstance().getFondoFijo()+"");

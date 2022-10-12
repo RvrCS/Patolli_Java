@@ -4,10 +4,10 @@ import javax.xml.bind.ParseConversionEvent;
 
 public class crearPartida extends javax.swing.JFrame {
 	
-	int casilla = 12;
-	int jugadores= 2;
-	int fondoApuesta = 10;
-	int montoApuesta = 1;
+	private int casilla = 12;
+	private int jugadores= 2;
+	private int fondoApuesta = 10;
+	private int montoApuesta = 1;
 	
 	public crearPartida() {
 		initComponents();
@@ -258,7 +258,7 @@ private void casillasAspasMax(){
 /**
  * Metodo que limita el minimo de casillas del tablero
  */
-public void casillasAspasMin(){
+private void casillasAspasMin(){
 	int CASILLASMIN = 10;
 	if (this.casilla >CASILLASMIN) {
 		casilla -= 2;
@@ -269,7 +269,7 @@ public void casillasAspasMin(){
 /**
  * Metodo que establece el maximo de jugadores por juego
  */
-public void numJugadoresMax(){
+private void numJugadoresMax(){
 	int JUGADORESMAX=4;
 	if (this.jugadores <JUGADORESMAX) {
 		jugadores += 1;
@@ -280,7 +280,7 @@ public void numJugadoresMax(){
 /**
  * Metodo que establece el minimo de jugadores por juego
  */
-public void numJugadoresMin(){
+private void numJugadoresMin(){
 	int JUGADORESMIN=2;
 	if (this.jugadores >JUGADORESMIN) {
 		jugadores -= 1;
@@ -291,7 +291,7 @@ public void numJugadoresMin(){
 /**
  * Metodo que establece el fondo del juego
  */
-public void fondoApuestaMax(){
+private void fondoApuestaMax(){
 	fondoApuesta+=1;
 	this.lbValorFondo.setText(String.valueOf(fondoApuesta));
 }
@@ -299,7 +299,7 @@ public void fondoApuestaMax(){
 /**
  * Metodo que establece el fondo minimo del juego
  */
-public void fondoApuestaMIN(){
+private void fondoApuestaMIN(){
 	if (fondoApuesta>1) {
 		fondoApuesta-=1;
 		this.lbValorFondo.setText(String.valueOf(fondoApuesta));
@@ -309,7 +309,7 @@ public void fondoApuestaMIN(){
 /**
  * Metodo que establece la apuesta del juego
  */
-public void montoApuestaMax(){
+private void montoApuestaMax(){
 	montoApuesta += 1;
 	this.lbMontoApuesta.setText(String.valueOf(montoApuesta));
 }
@@ -317,7 +317,7 @@ public void montoApuestaMax(){
 /**
  * Metodo que establece el monto de apuesta minimo del juego
  */
-public void montoApuestaMin(){
+private void montoApuestaMin(){
 	if (montoApuesta > 1) {
 		montoApuesta -= 1;
 		this.lbMontoApuesta.setText(String.valueOf(montoApuesta));
