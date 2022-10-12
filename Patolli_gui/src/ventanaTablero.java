@@ -5,8 +5,6 @@ import java.awt.Dimension;
 
 public class ventanaTablero extends javax.swing.JFrame {
 	private tableroCanvas tbCanvas;
-//	private int numCasillasAspa = 12;
-//	private Juego juego;
 	private static ventanaTablero singletonTablero;
 	
 	Tablero tablero = new Tablero();
@@ -21,15 +19,19 @@ public class ventanaTablero extends javax.swing.JFrame {
         
 	public ventanaTablero() {
 		initComponents();
-//		this.inicializar();
 	}
 
 	
-	
+	/**
+	 * Metodo que inicializa el tablero estableciando medidas y generando las casillas
+	 */
 	protected void inicializar() {
 		
-		this.lbFondoApuesta.setText(Juego.getInstance().getFondoFijo()+"");
 		this.lbMontoApuesta.setText(Juego.getInstance().getApuesta()+"");
+		this.lbFondoApuestaJg1.setText(Juego.getInstance().getFondoFijo()+"");
+		this.lbFondoApuestaJg2.setText(Juego.getInstance().getFondoFijo()+"");
+		this.lbFondoApuestaJg3.setText(Juego.getInstance().getFondoFijo()+"");
+		this.lbFondoApuestaJg4.setText(Juego.getInstance().getFondoFijo()+"");
 		
 		tbCanvas = new tableroCanvas(tablero.getCasillas(),Juego.getInstance().getNumCasillasAspa(), this.getWidth());
 		tablero.setCasillas(tbCanvas.generarCasillas());
@@ -40,9 +42,10 @@ public class ventanaTablero extends javax.swing.JFrame {
 		Dimension dim=super.getToolkit().getScreenSize();
 		tbCanvas.setLocation((int)dim.getWidth()/5, (int) dim.getHeight()/6);
 		this.add(tbCanvas);
-//		pintarTablero();
 	} 
-
+	/**
+	 * Metodo que dibuja el tablero
+	 */
 	public void pintarTablero() {
 		tbCanvas.setCasillas(Juego.getInstance().getTablero().getCasillas());
 		this.repaint();
@@ -56,28 +59,38 @@ public class ventanaTablero extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        lbFondoApuesta = new javax.swing.JLabel();
+        fondoApuestaJugador1 = new javax.swing.JLabel();
+        lbFondoApuestaJg1 = new javax.swing.JLabel();
         lbMontoApuesta = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        lbJugador1 = new javax.swing.JLabel();
+        lbJugador2 = new javax.swing.JLabel();
+        lbJugador3 = new javax.swing.JLabel();
+        lbJugador4 = new javax.swing.JLabel();
+        lbColorJg1 = new javax.swing.JLabel();
+        fondoApuestaJugador2 = new javax.swing.JLabel();
+        lbFondoApuestaJg2 = new javax.swing.JLabel();
+        lbColorJg2 = new javax.swing.JLabel();
+        fondoApuestaJugador3 = new javax.swing.JLabel();
+        lbFondoApuestaJg3 = new javax.swing.JLabel();
+        lbColorJg3 = new javax.swing.JLabel();
+        fondoApuestaJugador4 = new javax.swing.JLabel();
+        lbFondoApuestaJg4 = new javax.swing.JLabel();
+        lbColorJg4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel1.setText("Fondo de apuesta");
+        fondoApuestaJugador1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        fondoApuestaJugador1.setText("Fondo de apuesta");
 
-        lbFondoApuesta.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        lbFondoApuesta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbFondoApuesta.setText("0");
+        lbFondoApuestaJg1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lbFondoApuestaJg1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbFondoApuestaJg1.setText("0");
 
         lbMontoApuesta.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lbMontoApuesta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -99,74 +112,170 @@ public class ventanaTablero extends javax.swing.JFrame {
 
         jButton4.setText("Tirar cañas");
 
-        jLabel3.setText("jLabel3");
+        lbJugador1.setText("Esperando jugador");
 
-        jLabel4.setText("jLabel4");
+        lbJugador2.setText("Esperando jugador");
 
-        jLabel5.setText("jLabel5");
+        lbJugador3.setText("Esperando jugador");
 
-        jLabel6.setText("jLabel6");
+        lbJugador4.setText("Esperando jugador");
+
+        lbColorJg1.setText("Color");
+
+        fondoApuestaJugador2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        fondoApuestaJugador2.setText("Fondo de apuesta");
+
+        lbFondoApuestaJg2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lbFondoApuestaJg2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbFondoApuestaJg2.setText("0");
+
+        lbColorJg2.setText("Color");
+
+        fondoApuestaJugador3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        fondoApuestaJugador3.setText("Fondo de apuesta");
+
+        lbFondoApuestaJg3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lbFondoApuestaJg3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbFondoApuestaJg3.setText("0");
+
+        lbColorJg3.setText("Color");
+
+        fondoApuestaJugador4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        fondoApuestaJugador4.setText("Fondo de apuesta");
+
+        lbFondoApuestaJg4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lbFondoApuestaJg4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbFondoApuestaJg4.setText("0");
+
+        lbColorJg4.setText("Color");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(508, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
-                .addGap(334, 334, 334))
+                .addGap(0, 450, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton4)
+                        .addGap(392, 392, 392))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbMontoApuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(256, 256, 256)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fondoApuestaJugador4, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(lbFondoApuestaJg4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(32, 32, 32))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbFondoApuesta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbMontoApuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(68, 68, 68)
+                        .addComponent(lbJugador1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
+                        .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(70, 70, 70)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(fondoApuestaJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(fondoApuestaJugador3, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbFondoApuestaJg1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fondoApuestaJugador2, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbFondoApuestaJg2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbFondoApuestaJg3, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(8, 8, 8)))))
+                .addGap(24, 24, 24))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addComponent(lbColorJg1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbColorJg3)
+                .addGap(121, 121, 121))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(lbJugador2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbJugador4)
+                .addGap(103, 103, 103))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(lbColorJg2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbColorJg4)
+                .addGap(139, 139, 139))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbJugador3)
+                .addGap(84, 84, 84))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(81, 81, 81)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(51, 51, 51)
+                                .addComponent(lbJugador1)
+                                .addGap(14, 14, 14))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(lbJugador3)
+                                .addGap(18, 18, 18)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbColorJg1)
+                            .addComponent(lbColorJg3))
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fondoApuestaJugador1)
+                            .addComponent(fondoApuestaJugador3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbFondoApuestaJg1))
+                    .addComponent(lbFondoApuestaJg3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 299, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel5))
-                .addGap(69, 69, 69)
+                    .addComponent(lbJugador2)
+                    .addComponent(lbJugador4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbFondoApuesta)
+                    .addComponent(lbColorJg2)
+                    .addComponent(lbColorJg4))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(fondoApuestaJugador4)
+                        .addGap(2, 2, 2)
+                        .addComponent(lbFondoApuestaJg4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(fondoApuestaJugador2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbFondoApuestaJg2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbMontoApuesta)))))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbMontoApuesta)
-                .addGap(77, 77, 77)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton4)
                     .addComponent(jButton1)
                     .addComponent(jButton3))
-                .addGap(21, 21, 21))
+                .addGap(43, 43, 43))
         );
 
         pack();
@@ -180,17 +289,27 @@ public class ventanaTablero extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel fondoApuestaJugador1;
+    private javax.swing.JLabel fondoApuestaJugador2;
+    private javax.swing.JLabel fondoApuestaJugador3;
+    private javax.swing.JLabel fondoApuestaJugador4;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    public javax.swing.JLabel jLabel3;
-    public javax.swing.JLabel jLabel4;
-    public javax.swing.JLabel jLabel5;
-    public javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel lbFondoApuesta;
+    public javax.swing.JLabel lbColorJg1;
+    public javax.swing.JLabel lbColorJg2;
+    public javax.swing.JLabel lbColorJg3;
+    public javax.swing.JLabel lbColorJg4;
+    public javax.swing.JLabel lbFondoApuestaJg1;
+    public javax.swing.JLabel lbFondoApuestaJg2;
+    public javax.swing.JLabel lbFondoApuestaJg3;
+    public javax.swing.JLabel lbFondoApuestaJg4;
+    public javax.swing.JLabel lbJugador1;
+    public javax.swing.JLabel lbJugador2;
+    public javax.swing.JLabel lbJugador3;
+    public javax.swing.JLabel lbJugador4;
     private javax.swing.JLabel lbMontoApuesta;
     // End of variables declaration//GEN-END:variables
  }

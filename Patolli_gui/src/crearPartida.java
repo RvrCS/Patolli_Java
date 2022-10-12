@@ -4,8 +4,6 @@ import javax.xml.bind.ParseConversionEvent;
 
 public class crearPartida extends javax.swing.JFrame {
 	
-//	Juego juego;
-	
 	int casilla = 12;
 	int jugadores= 2;
 	int fondoApuesta = 10;
@@ -17,7 +15,6 @@ public class crearPartida extends javax.swing.JFrame {
 		this.lbNumJugador.setText(String.valueOf(jugadores));
 		this.lbValorFondo.setText(String.valueOf(fondoApuesta));
 		this.lbMontoApuesta.setText(String.valueOf(montoApuesta));
-//		this.juego = new Juego();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -204,21 +201,15 @@ public class crearPartida extends javax.swing.JFrame {
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
 	this.setVisible(false);
-//	ventana.setNumCasillasAspa(Integer.parseInt(this.lbValorCasilla.getText()));
 	Juego.getInstance().setNumCasillasAspa(Integer.parseInt(this.lbValorCasilla.getText()));
 	Juego.getInstance().setFondoFijo(Integer.parseInt(this.lbValorFondo.getText()));
 	Juego.getInstance().setApuesta(Integer.parseInt(this.lbMontoApuesta.getText()));
-	
 	ventanaTablero.getInstance().inicializar();
-	
 	crearJugador.getInstance().setVisible(true);
-	
-//	ventanaTablero.getInstance().setVisible(true);
-	
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-//	m.setVisible(true);
+	menu.getInstance().setVisible(true);
 	this.dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
@@ -254,6 +245,9 @@ public class crearPartida extends javax.swing.JFrame {
 	montoApuestaMin();
     }//GEN-LAST:event_btnMenosMontoApuestaActionPerformed
 
+	/**
+	 * Metodo que limita el maximo de casillas del tablero
+	 */
 private void casillasAspasMax(){
 	int CASILLASMAX = 14;
 	if (this.casilla <CASILLASMAX) {
@@ -261,7 +255,9 @@ private void casillasAspasMax(){
 		this.lbValorCasilla.setText(String.valueOf(casilla));
 	}	
 }
-
+/**
+ * Metodo que limita el minimo de casillas del tablero
+ */
 public void casillasAspasMin(){
 	int CASILLASMIN = 10;
 	if (this.casilla >CASILLASMIN) {
@@ -270,6 +266,9 @@ public void casillasAspasMin(){
 	}
 }
 
+/**
+ * Metodo que establece el maximo de jugadores por juego
+ */
 public void numJugadoresMax(){
 	int JUGADORESMAX=4;
 	if (this.jugadores <JUGADORESMAX) {
@@ -278,6 +277,9 @@ public void numJugadoresMax(){
 	}
 }
 
+/**
+ * Metodo que establece el minimo de jugadores por juego
+ */
 public void numJugadoresMin(){
 	int JUGADORESMIN=2;
 	if (this.jugadores >JUGADORESMIN) {
@@ -286,10 +288,17 @@ public void numJugadoresMin(){
 	}
 }
 
+/**
+ * Metodo que establece el fondo del juego
+ */
 public void fondoApuestaMax(){
 	fondoApuesta+=1;
 	this.lbValorFondo.setText(String.valueOf(fondoApuesta));
 }
+
+/**
+ * Metodo que establece el fondo minimo del juego
+ */
 public void fondoApuestaMIN(){
 	if (fondoApuesta>1) {
 		fondoApuesta-=1;
@@ -297,11 +306,17 @@ public void fondoApuestaMIN(){
 	}
 }
 
+/**
+ * Metodo que establece la apuesta del juego
+ */
 public void montoApuestaMax(){
 	montoApuesta += 1;
 	this.lbMontoApuesta.setText(String.valueOf(montoApuesta));
 }
 
+/**
+ * Metodo que establece el monto de apuesta minimo del juego
+ */
 public void montoApuestaMin(){
 	if (montoApuesta > 1) {
 		montoApuesta -= 1;

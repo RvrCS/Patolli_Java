@@ -5,7 +5,7 @@ public class menu extends javax.swing.JFrame {
 
 	crearPartida cp;
 	private static menu singeltonMenu;
-	
+
 	public menu() {
 		initComponents();
 		cp = new crearPartida();
@@ -66,14 +66,12 @@ public class menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPartidaActionPerformed
-
-		this.cp.setVisible(true);
-		this.dispose();
+	this.cp.setVisible(true);
+	this.dispose();
 
     }//GEN-LAST:event_btnCrearPartidaActionPerformed
 
     private void btnUnirsePartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUnirsePartidaActionPerformed
-		// TODO add your handling code here:
 		crearJugador.getInstance().setVisible(true);
 		this.dispose();
     }//GEN-LAST:event_btnUnirsePartidaActionPerformed
@@ -81,14 +79,17 @@ public class menu extends javax.swing.JFrame {
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
 		System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
-	
-	public static menu getInstance(){
+	/**
+	 * Metodo que regresa una instancia de la clase
+	 * @return 
+	 */
+	public static menu getInstance() {
 		if (singeltonMenu == null) {
 			singeltonMenu = new menu();
 		}
 		return singeltonMenu;
 	}
-	
+
 	public static void main(String args[]) {
 		/* Set the Nimbus look and feel */
 		//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -4,10 +4,10 @@ import entidades.Jugador;
 
 
 public class crearJugador extends javax.swing.JFrame {
-    
+		
 	private static crearJugador singeltonCJ;
-	
-        crearPartida cP = new crearPartida();
+	private String color;
+            crearPartida cP = new crearPartida();
 	public crearJugador() {
 		initComponents();
 	}
@@ -19,10 +19,10 @@ public class crearJugador extends javax.swing.JFrame {
         btn_Atras = new javax.swing.JButton();
         txtNombre = new javax.swing.JTextField();
         btn_Confirmar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnMorado = new javax.swing.JButton();
+        btnAmarillo = new javax.swing.JButton();
+        btnRojo = new javax.swing.JButton();
+        btnVerde = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -41,11 +41,6 @@ public class crearJugador extends javax.swing.JFrame {
         getContentPane().add(btn_Atras, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
 
         txtNombre.setBackground(new java.awt.Color(255, 0, 153));
-        txtNombre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreActionPerformed(evt);
-            }
-        });
         getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 170, 30));
 
         btn_Confirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_Confirmar.png"))); // NOI18N
@@ -58,29 +53,49 @@ public class crearJugador extends javax.swing.JFrame {
         });
         getContentPane().add(btn_Confirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colorFicha1.png"))); // NOI18N
-        jButton1.setText("jButton1");
-        jButton1.setContentAreaFilled(false);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
+        btnMorado.setBackground(new java.awt.Color(0, 0, 0));
+        btnMorado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colorFicha1.png"))); // NOI18N
+        btnMorado.setContentAreaFilled(false);
+        btnMorado.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colorFicha1_2.png"))); // NOI18N
+        btnMorado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMoradoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnMorado, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colorFicha2.png"))); // NOI18N
-        jButton3.setText("jButton3");
-        jButton3.setContentAreaFilled(false);
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, -1, -1));
+        btnAmarillo.setBackground(new java.awt.Color(0, 0, 0));
+        btnAmarillo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colorFicha2.png"))); // NOI18N
+        btnAmarillo.setContentAreaFilled(false);
+        btnAmarillo.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colorFicha2_2.png"))); // NOI18N
+        btnAmarillo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAmarilloActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAmarillo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, -1, -1));
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 0));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colorFicha3.png"))); // NOI18N
-        jButton4.setText("jButton4");
-        jButton4.setContentAreaFilled(false);
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, -1, -1));
+        btnRojo.setBackground(new java.awt.Color(0, 0, 0));
+        btnRojo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colorFicha3.png"))); // NOI18N
+        btnRojo.setContentAreaFilled(false);
+        btnRojo.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colorFicha3_3.png"))); // NOI18N
+        btnRojo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRojoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRojo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, -1, -1));
 
-        jButton5.setBackground(new java.awt.Color(0, 0, 0));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colorFicha4.png"))); // NOI18N
-        jButton5.setText("jButton5");
-        jButton5.setContentAreaFilled(false);
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, -1, -1));
+        btnVerde.setBackground(new java.awt.Color(0, 0, 0));
+        btnVerde.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colorFicha4.png"))); // NOI18N
+        btnVerde.setContentAreaFilled(false);
+        btnVerde.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colorFicha4_4.png"))); // NOI18N
+        btnVerde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerdeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnVerde, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 102, 204));
@@ -94,48 +109,123 @@ public class crearJugador extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreActionPerformed
-
+	/**
+	 *Metodo que regresa de pantalla
+	 * @param evt 
+	 */
     private void btn_AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AtrasActionPerformed
-        // TODO add your handling code here:
+	this.dispose();
+	menu.getInstance().setVisible(true);
+		
     }//GEN-LAST:event_btn_AtrasActionPerformed
 
+	/**
+	 * Metodo que establece todos los valores puestos de la interfaz de usuario
+	 * @param evt 
+	 */
     private void btn_ConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ConfirmarActionPerformed
-        // TODO add your handling code here:
-		int contador= 0;
-		
+        
 		Jugador jugador  = new Jugador();
 		jugador.setNombre(this.txtNombre.getText());
 		jugador.setFondo(Juego.getInstance().getFondoFijo());
+		jugador.setColor(color);
 		
 		Juego.getInstance().addJugador(jugador);
 		
 		ventanaTablero.getInstance().pintarTablero();
-		ventanaTablero.getInstance().jLabel3.setText(Juego.getInstance().getListaJugador().get(0).getNombre());
-
 		
-		if (Juego.getInstance().getListaJugador().size()>contador) {
-			
+		ventanaTablero.getInstance().lbJugador1.setText(Juego.getInstance().getListaJugador().get(0).getNombre());
+		ventanaTablero.getInstance().lbColorJg1.setText(Juego.getInstance().getListaJugador().get(0).getColor());
+		
+		
+		if (Juego.getInstance().getListaJugador().size()>1) {
 			if (Juego.getInstance().getListaJugador().get(1)!=null) {
-				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
-				contador++;
-			}
-			if (Juego.getInstance().getListaJugador().get(2)!=null) {
-				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
-			}
-			if (Juego.getInstance().getListaJugador().get(3)!=null) {
-				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
+				ventanaTablero.getInstance().lbJugador2.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
+				ventanaTablero.getInstance().lbColorJg2.setText(Juego.getInstance().getListaJugador().get(1).getColor());
 			}
 		}
-		
+		if (Juego.getInstance().getListaJugador().size()>2) {
+			if (Juego.getInstance().getListaJugador().get(2)!=null) {
+				ventanaTablero.getInstance().lbJugador3.setText(Juego.getInstance().getListaJugador().get(2).getNombre());
+				ventanaTablero.getInstance().lbColorJg3.setText(Juego.getInstance().getListaJugador().get(2).getColor());
+			}
+		}
+		if (Juego.getInstance().getListaJugador().size()>3) {
+			if (Juego.getInstance().getListaJugador().get(3)!=null) {
+				ventanaTablero.getInstance().lbJugador4.setText(Juego.getInstance().getListaJugador().get(3).getNombre());
+				ventanaTablero.getInstance().lbColorJg4.setText(Juego.getInstance().getListaJugador().get(3).getColor());
+			}
+		}
 		ventanaTablero.getInstance().setVisible(true);
 		
 		this.txtNombre.setText("");
 		this.dispose();
+		
+		if (this.color.equalsIgnoreCase("morado")) {
+			this.btnMorado.setVisible(false);
+			this.color="";
+		}
+		if (this.color.equalsIgnoreCase("amarillo")) {
+			this.btnAmarillo.setVisible(false);
+			this.color="";
+		}
+		if (this.color.equalsIgnoreCase("rojo")) {
+			this.btnRojo.setVisible(false);
+			this.color="";
+		}
+		if (this.color.equalsIgnoreCase("verde")) {
+			this.btnVerde.setVisible(false);
+			this.color="";
+		}
     }//GEN-LAST:event_btn_ConfirmarActionPerformed
-
+	/**
+	 * Metodo que establece el color del jugador
+	 * @param evt 
+	 */
+    private void btnMoradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoradoActionPerformed
+		this.color = "morado";
+		this.btnMorado.setSelected(true);
+		this.btnAmarillo.setSelected(false);
+		this.btnRojo.setSelected(false);
+		this.btnVerde.setSelected(false);
+    }//GEN-LAST:event_btnMoradoActionPerformed
+	/**
+	 * Metodo que establece el color del jugador
+	 * @param evt 
+	 */
+    private void btnAmarilloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAmarilloActionPerformed
+		this.color = "amarillo";
+		this.btnMorado.setSelected(false);
+		this.btnAmarillo.setSelected(true);
+		this.btnRojo.setSelected(false);
+		this.btnVerde.setSelected(false);
+    }//GEN-LAST:event_btnAmarilloActionPerformed
+	/**
+	 * Metodo que establece el color del jugador
+	 * @param evt 
+	 */
+    private void btnRojoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRojoActionPerformed
+		this.color = "rojo";
+		this.btnMorado.setSelected(false);
+		this.btnAmarillo.setSelected(false);
+		this.btnRojo.setSelected(true);
+		this.btnVerde.setSelected(false);
+    }//GEN-LAST:event_btnRojoActionPerformed
+	/**
+	 * Metodo que establece el color del jugador
+	 * @param evt 
+	 */
+    private void btnVerdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerdeActionPerformed
+		this.color = "verde";
+		this.btnMorado.setSelected(false);
+		this.btnAmarillo.setSelected(false);
+		this.btnRojo.setSelected(false);
+		this.btnVerde.setSelected(true);
+    }//GEN-LAST:event_btnVerdeActionPerformed
+	/**
+	 * Metodo que regresa una instacia de la clase
+	 * @return 
+	 */
 	public static crearJugador getInstance(){
 		if (singeltonCJ == null) {
 			singeltonCJ = new crearJugador();
@@ -179,12 +269,12 @@ public class crearJugador extends javax.swing.JFrame {
 	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAmarillo;
+    private javax.swing.JButton btnMorado;
+    private javax.swing.JButton btnRojo;
+    private javax.swing.JButton btnVerde;
     private javax.swing.JButton btn_Atras;
     private javax.swing.JButton btn_Confirmar;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField txtNombre;

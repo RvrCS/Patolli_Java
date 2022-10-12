@@ -1,18 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package entidades;
 
-/**
- *
- * @author River
- */
 public class Jugador {
 
 	private String nombre;
 	private int fondo;
+	private String color;
 
 	public Jugador(String nombre, int fondo) {
 		this.nombre = nombre;
@@ -38,4 +30,11 @@ public class Jugador {
 		this.fondo = fondo;
 	}
 
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
 }
