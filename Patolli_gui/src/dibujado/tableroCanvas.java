@@ -23,19 +23,32 @@ public class tableroCanvas extends JPanel{
 	protected  final int TAMANIOCASILLA = 25;
 	
 	
+	/**
+	 * Metodo constructor que recibe e instancia los valores  enviados
+	 * @param casillas
+	 * @param numCasillasAspa
+	 * @param anchoPantalla 
+	 */
+	
 	public tableroCanvas(LinkedList<Casilla> casillas, int numCasillasAspa, int anchoPantalla) {
 		this.casillas = casillas;
 		this.numCasillasAspa = numCasillasAspa;
 		this.anchoPantalla=anchoPantalla/6;
-//		this.ancho = casillas.size() * 50 + 50 * 3;
-//		this.alto=ancho;
 		inicializar();
 	}
 	
+	/**
+	 * Metodo que pone en blanco el fondo de la ventana
+	 */
 	private void inicializar() {
 		this.setBackground(new Color(0, 0, 0, 0));
 	}
 	
+	
+	/**
+	 * Metodo que dibuja todas las casillas del tablero, estas se dibujan mediante la lista Casillas
+	 * @param g 
+	 */
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
@@ -54,6 +67,12 @@ public class tableroCanvas extends JPanel{
 			}
 		}
 	}
+	
+	/**
+	 * Metodo que genera todas las casillas del juego
+	 * Aqui se calcula en donde se dibujara espesificamente cada casilla
+	 * @return 
+	 */
 	
 	public LinkedList<Casilla> generarCasillas() {
 		int tamanioCasilla = TAMANIOCASILLA;
@@ -224,10 +243,20 @@ public class tableroCanvas extends JPanel{
 		return casillas;
 	}
 	
+	/**
+	 * Metodo que establece una lista de casillas por otra recibida en el parametro
+	 * @param casillas 
+	 */
 	public void setCasillas(LinkedList<Casilla> casillas) {
 		this.casillas = casillas;
 	}
 	
+	/**
+	 * Metodo que dibuja exclusivamente la casilla del centro, mediante los parametros recibidos
+	 * @param g2d
+	 * @param casilla
+	 * @param numCasillasAspa 
+	 */
 	public void dibujarCentro(Graphics2D g2d,Casilla casilla, int numCasillasAspa) {
 		Graphics g;
 		g2d.setStroke(new BasicStroke(2));
@@ -241,6 +270,12 @@ public class tableroCanvas extends JPanel{
 		g2d.draw(rect);
 		
 	}
+	
+	/**
+	 * Metodo que dibuja exclusivamente el final de las aspas de el tablero, mediante los parametros recibidos
+	 * @param g2d
+	 * @param casilla 
+	 */
 	    public void dibujarCirculo(Graphics2D g2d,Casilla casilla) {
 		Shape punta = null;
 		g2d.setStroke(new BasicStroke(2));
@@ -287,7 +322,12 @@ public class tableroCanvas extends JPanel{
 			g2d.draw(punta);
 		}
 	}
-		
+	
+	/**
+	 * Metodo que dibuja exclusivamente los triangulos del tablero, mediante los parametros recibidos
+	 * @param g2d
+	 * @param casilla 
+	 */
 	public void dibujarTriangulo(Graphics2D g2d,Casilla casilla) {
 		
 		int x = casilla.getCoordenadaX();
@@ -334,6 +374,11 @@ public class tableroCanvas extends JPanel{
 		g2d.draw(rect);
 	}
 	
+	/**
+	 * Metodo que dibuja la casilla exclusiva del jugador, mediante los parametros establecidos
+	 * @param g2d
+	 * @param casilla 
+	 */
 	public void dibujarPropia(Graphics2D g2d,Casilla casilla) {
 		Rectangle rect = new Rectangle();
 		g2d.setColor(Color.GREEN);
@@ -345,6 +390,11 @@ public class tableroCanvas extends JPanel{
 		g2d.draw(rect);
 	}
 	
+	/**
+	 * Metodo que dibuja exclusivamente todas las casillas normales del tablero, mediante los parametros recibidos
+	 * @param g2d
+	 * @param casilla 
+	 */
 	public void dibujarNormal(Graphics2D g2d,Casilla casilla) {
 		Rectangle rect = new Rectangle();
 		g2d.setColor(Color.pink);
