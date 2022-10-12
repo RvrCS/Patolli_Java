@@ -110,7 +110,7 @@ public class crearJugador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 	/**
-	 *Metodo que regresa de pantalla
+	 *Método que regresa de pantalla
 	 * @param evt 
 	 */
     private void btn_AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AtrasActionPerformed
@@ -120,7 +120,7 @@ public class crearJugador extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_AtrasActionPerformed
 
 	/**
-	 * Metodo que establece todos los valores puestos de la interfaz de usuario
+	 * Método que establece todos los valores puestos de la interfaz de usuario
 	 * @param evt 
 	 */
     private void btn_ConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ConfirmarActionPerformed
@@ -134,22 +134,7 @@ public class crearJugador extends javax.swing.JFrame {
 		
 		ventanaTablero.getInstance().pintarTablero();
 		
-<<<<<<< HEAD
-//		if (Juego.getInstance().getListaJugador().size()>contador) {
-//			
-//			if (Juego.getInstance().getListaJugador().get(1)!=null) {
-//				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
-//				contador++;
-//			}
-//			if (Juego.getInstance().getListaJugador().get(2)!=null) {
-//				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
-//			}
-//			if (Juego.getInstance().getListaJugador().get(3)!=null) {
-//				ventanaTablero.getInstance().jLabel4.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
-//			}
-//		}
-		
-=======
+
 		ventanaTablero.getInstance().lbJugador1.setText(Juego.getInstance().getListaJugador().get(0).getNombre());
 		ventanaTablero.getInstance().lbColorJg1.setText(Juego.getInstance().getListaJugador().get(0).getColor());
 		
@@ -172,7 +157,6 @@ public class crearJugador extends javax.swing.JFrame {
 				ventanaTablero.getInstance().lbColorJg4.setText(Juego.getInstance().getListaJugador().get(3).getColor());
 			}
 		}
->>>>>>> interfaz
 		ventanaTablero.getInstance().setVisible(true);
 		
 		this.txtNombre.setText("");
@@ -196,7 +180,7 @@ public class crearJugador extends javax.swing.JFrame {
 		}
     }//GEN-LAST:event_btn_ConfirmarActionPerformed
 	/**
-	 * Metodo que establece el color del jugador
+	 * Método que establece el color del jugador
 	 * @param evt 
 	 */
     private void btnMoradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoradoActionPerformed
@@ -207,7 +191,7 @@ public class crearJugador extends javax.swing.JFrame {
 		this.btnVerde.setSelected(false);
     }//GEN-LAST:event_btnMoradoActionPerformed
 	/**
-	 * Metodo que establece el color del jugador
+	 * Método que establece el color del jugador
 	 * @param evt 
 	 */
     private void btnAmarilloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAmarilloActionPerformed
@@ -218,7 +202,7 @@ public class crearJugador extends javax.swing.JFrame {
 		this.btnVerde.setSelected(false);
     }//GEN-LAST:event_btnAmarilloActionPerformed
 	/**
-	 * Metodo que establece el color del jugador
+	 * Método que establece el color del jugador
 	 * @param evt 
 	 */
     private void btnRojoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRojoActionPerformed
@@ -229,7 +213,7 @@ public class crearJugador extends javax.swing.JFrame {
 		this.btnVerde.setSelected(false);
     }//GEN-LAST:event_btnRojoActionPerformed
 	/**
-	 * Metodo que establece el color del jugador
+	 * Método que establece el color del jugador
 	 * @param evt 
 	 */
     private void btnVerdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerdeActionPerformed
@@ -240,8 +224,8 @@ public class crearJugador extends javax.swing.JFrame {
 		this.btnVerde.setSelected(true);
     }//GEN-LAST:event_btnVerdeActionPerformed
 	/**
-	 * Metodo que regresa una instacia de la clase
-	 * @return 
+	 * Método que regresa una instacia de la clase.
+	 * @return Regresa la misma instancia ya creada de la pantalla crear jugador. 
 	 */
 	public static crearJugador getInstance(){
 		if (singeltonCJ == null) {
