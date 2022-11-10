@@ -72,26 +72,20 @@ public class ventanaTablero extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 0, 0));
-        setForeground(java.awt.Color.white);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 255));
         jLabel1.setText("Fondo de apuesta");
 
         lbFondoApuesta.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        lbFondoApuesta.setForeground(new java.awt.Color(255, 0, 204));
         lbFondoApuesta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbFondoApuesta.setText("0");
 
         lbMontoApuesta.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        lbMontoApuesta.setForeground(new java.awt.Color(204, 0, 204));
         lbMontoApuesta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbMontoApuesta.setText("0");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 0, 204));
         jLabel2.setText("Monto por apuesta");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -102,8 +96,9 @@ public class ventanaTablero extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbFondoApuesta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbFondoApuesta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(lbMontoApuesta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(1024, Short.MAX_VALUE))
         );
@@ -118,7 +113,7 @@ public class ventanaTablero extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbMontoApuesta)
-                .addContainerGap(552, Short.MAX_VALUE))
+                .addContainerGap(515, Short.MAX_VALUE))
         );
 
         pack();
