@@ -84,7 +84,7 @@ public class ventanaTablero extends javax.swing.JFrame {
         lbColorJg4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 0, 0));
+        setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
 
         fondoApuestaJugador1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
