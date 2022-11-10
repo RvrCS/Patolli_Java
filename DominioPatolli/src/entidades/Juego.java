@@ -1,6 +1,5 @@
 package entidades;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Juego {
@@ -8,7 +7,6 @@ public class Juego {
 	private Tablero tablero;
 	private int apuesta, fondoFijo,numCasillasAspa;
 	private List<Jugador> jugadores;
-	private static Juego singletonJuego;
 	
 	
 	public Juego(Tablero tablero, int apuesta, int fondoFijo,int numCasillasAspa, List<Jugador> jugadores) {
@@ -21,7 +19,6 @@ public class Juego {
 
 	public Juego() {
 		this.tablero  = new Tablero();
-		this.jugadores = new ArrayList<>();
 	}
 
 	public Tablero getTablero() {
@@ -55,19 +52,4 @@ public class Juego {
 	public void setNumCasillasAspa(int numCasillasAspa) {
 		this.numCasillasAspa = numCasillasAspa;
 	}
-	
-	public void addJugador(Jugador jugador){
-		this.jugadores.add(jugador);
-	}
-	
-	public List<Jugador> getListaJugador(){
-		return this.jugadores;
-	}
-	
-	public static  Juego getInstance(){
-		if (singletonJuego == null) {
-			singletonJuego = new Juego();
-		}
-		return singletonJuego;
-	}	
 }

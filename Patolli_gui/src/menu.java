@@ -3,12 +3,11 @@ import javax.swing.ImageIcon;
 
 public class menu extends javax.swing.JFrame {
 
-	crearPartida cp;
-	private static menu singeltonMenu;
+	crearPartida crear;
 
 	public menu() {
 		initComponents();
-		cp = new crearPartida();
+		crear = new crearPartida(this);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -66,29 +65,17 @@ public class menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPartidaActionPerformed
-	this.cp.setVisible(true);
-	this.dispose();
-
+		this.crear.setVisible(true);
+		this.setVisible(false);
     }//GEN-LAST:event_btnCrearPartidaActionPerformed
 
     private void btnUnirsePartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUnirsePartidaActionPerformed
-		crearJugador.getInstance().setVisible(true);
-		this.dispose();
+		// TODO add your handling code here:
     }//GEN-LAST:event_btnUnirsePartidaActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
 		System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
-	/**
-	 * Metodo que regresa una instancia de la clase
-	 * @return 
-	 */
-	public static menu getInstance() {
-		if (singeltonMenu == null) {
-			singeltonMenu = new menu();
-		}
-		return singeltonMenu;
-	}
 
 	public static void main(String args[]) {
 		/* Set the Nimbus look and feel */

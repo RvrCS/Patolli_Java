@@ -3,18 +3,24 @@ import entidades.Juego;
 import javax.xml.bind.ParseConversionEvent;
 
 public class crearPartida extends javax.swing.JFrame {
+	menu m;
+	ventanaTablero ventana; 
+	Juego juego;
 	
-	private int casilla = 12;
-	private int jugadores= 2;
-	private int fondoApuesta = 10;
-	private int montoApuesta = 1;
+	int casilla = 12;
+	int jugadores= 2;
+	int fondoApuesta = 10;
+	int montoApuesta = 1;
 	
-	public crearPartida() {
+	public crearPartida(menu m) {
 		initComponents();
 		this.lbValorCasilla.setText(String.valueOf(casilla));
 		this.lbNumJugador.setText(String.valueOf(jugadores));
 		this.lbValorFondo.setText(String.valueOf(fondoApuesta));
 		this.lbMontoApuesta.setText(String.valueOf(montoApuesta));
+		this.m=m;
+		this.ventana =  new ventanaTablero();
+		this.juego = new Juego();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -201,16 +207,19 @@ public class crearPartida extends javax.swing.JFrame {
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
 	this.setVisible(false);
-	Juego.getInstance().setNumCasillasAspa(Integer.parseInt(this.lbValorCasilla.getText()));
-	Juego.getInstance().setFondoFijo(Integer.parseInt(this.lbValorFondo.getText()));
-	Juego.getInstance().setApuesta(Integer.parseInt(this.lbMontoApuesta.getText()));
-	ventanaTablero.getInstance().inicializar();
-	crearJugador.getInstance().setVisible(true);
+//	ventana.setNumCasillasAspa(Integer.parseInt(this.lbValorCasilla.getText()));
+	this.juego.setNumCasillasAspa(Integer.parseInt(this.lbValorCasilla.getText()));
+	this.juego.setFondoFijo(Integer.parseInt(this.lbValorFondo.getText()));
+	this.juego.setApuesta(Integer.parseInt(this.lbMontoApuesta.getText()));
+	
+	ventana.inicializar(this.juego);
+	ventana.setVisible(true);
+	
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-	menu.getInstance().setVisible(true);
-	this.dispose();
+	m.setVisible(true);
+	this.setVisible(false);
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnMasCasillasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasCasillasActionPerformed
@@ -245,9 +254,6 @@ public class crearPartida extends javax.swing.JFrame {
 	montoApuestaMin();
     }//GEN-LAST:event_btnMenosMontoApuestaActionPerformed
 
-	/**
-	 * Metodo que limita el maximo de casillas del tablero
-	 */
 private void casillasAspasMax(){
 	int CASILLASMAX = 14;
 	if (this.casilla <CASILLASMAX) {
@@ -255,10 +261,8 @@ private void casillasAspasMax(){
 		this.lbValorCasilla.setText(String.valueOf(casilla));
 	}	
 }
-/**
- * Metodo que limita el minimo de casillas del tablero
- */
-private void casillasAspasMin(){
+
+public void casillasAspasMin(){
 	int CASILLASMIN = 10;
 	if (this.casilla >CASILLASMIN) {
 		casilla -= 2;
@@ -266,10 +270,7 @@ private void casillasAspasMin(){
 	}
 }
 
-/**
- * Metodo que establece el maximo de jugadores por juego
- */
-private void numJugadoresMax(){
+public void numJugadoresMax(){
 	int JUGADORESMAX=4;
 	if (this.jugadores <JUGADORESMAX) {
 		jugadores += 1;
@@ -277,10 +278,7 @@ private void numJugadoresMax(){
 	}
 }
 
-/**
- * Metodo que establece el minimo de jugadores por juego
- */
-private void numJugadoresMin(){
+public void numJugadoresMin(){
 	int JUGADORESMIN=2;
 	if (this.jugadores >JUGADORESMIN) {
 		jugadores -= 1;
@@ -288,36 +286,23 @@ private void numJugadoresMin(){
 	}
 }
 
-/**
- * Metodo que establece el fondo del juego
- */
-private void fondoApuestaMax(){
+public void fondoApuestaMax(){
 	fondoApuesta+=1;
 	this.lbValorFondo.setText(String.valueOf(fondoApuesta));
 }
-
-/**
- * Metodo que establece el fondo minimo del juego
- */
-private void fondoApuestaMIN(){
+public void fondoApuestaMIN(){
 	if (fondoApuesta>1) {
 		fondoApuesta-=1;
 		this.lbValorFondo.setText(String.valueOf(fondoApuesta));
 	}
 }
 
-/**
- * Metodo que establece la apuesta del juego
- */
-private void montoApuestaMax(){
+public void montoApuestaMax(){
 	montoApuesta += 1;
 	this.lbMontoApuesta.setText(String.valueOf(montoApuesta));
 }
 
-/**
- * Metodo que establece el monto de apuesta minimo del juego
- */
-private void montoApuestaMin(){
+public void montoApuestaMin(){
 	if (montoApuesta > 1) {
 		montoApuesta -= 1;
 		this.lbMontoApuesta.setText(String.valueOf(montoApuesta));

@@ -1,40 +1,40 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package entidades;
 
+/**
+ *
+ * @author River
+ */
 public class Jugador {
+    
+    private String nombre;
+    private int fondo;
 
-	private String nombre;
-	private int fondo;
-	private String color;
+    public Jugador(String nombre, int fondo) {
+        this.nombre = nombre;
+        this.fondo = fondo;
+    }
 
-	public Jugador(String nombre, int fondo) {
-		this.nombre = nombre;
-		this.fondo = fondo;
-	}
+    public String getNombre() {
+        return nombre;
+    }
 
-	public Jugador() {
-	}
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-	public String getNombre() {
-		return nombre;
-	}
+    public int getFondo() {
+        return fondo;
+    }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public int getFondo() {
-		return fondo;
-	}
-
-	public void setFondo(int fondo) {
-		this.fondo = fondo;
-	}
-
-	public String getColor() {
-		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
-	}
+    public void setFondo(int fondo) {
+        this.fondo = fondo;
+    }
+    
+    
+    
 }
