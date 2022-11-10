@@ -88,7 +88,7 @@ public class ventanaTablero extends javax.swing.JFrame {
         setResizable(false);
 
         fondoApuestaJugador1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        fondoApuestaJugador1.setText("Fondo de apuesta");
+        fondoApuestaJugador1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoDeApuesta.png"))); // NOI18N
 
         lbFondoApuestaJg1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lbFondoApuestaJg1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -98,7 +98,8 @@ public class ventanaTablero extends javax.swing.JFrame {
         lbMontoApuesta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbMontoApuesta.setText("0");
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 0, 153));
         jLabel2.setText("Monto por apuesta");
 
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -119,46 +120,63 @@ public class ventanaTablero extends javax.swing.JFrame {
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_sacarFicha.png"))); // NOI18N
         jButton3.setContentAreaFilled(false);
         jButton3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_sacarFicha2.png"))); // NOI18N
+        jButton3.setVerifyInputWhenFocusTarget(false);
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_tirarCañas.png"))); // NOI18N
         jButton4.setContentAreaFilled(false);
         jButton4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_tirarCañas2.png"))); // NOI18N
 
+        lbJugador1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        lbJugador1.setForeground(new java.awt.Color(204, 0, 153));
         lbJugador1.setText("Esperando jugador");
 
+        lbJugador2.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        lbJugador2.setForeground(new java.awt.Color(204, 0, 153));
         lbJugador2.setText("Esperando jugador");
 
+        lbJugador3.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        lbJugador3.setForeground(new java.awt.Color(204, 0, 153));
         lbJugador3.setText("Esperando jugador");
 
+        lbJugador4.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        lbJugador4.setForeground(new java.awt.Color(204, 0, 153));
         lbJugador4.setText("Esperando jugador");
 
+        lbColorJg1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        lbColorJg1.setForeground(new java.awt.Color(204, 0, 153));
         lbColorJg1.setText("Color");
 
         fondoApuestaJugador2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        fondoApuestaJugador2.setText("Fondo de apuesta");
+        fondoApuestaJugador2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoDeApuesta.png"))); // NOI18N
 
         lbFondoApuestaJg2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lbFondoApuestaJg2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbFondoApuestaJg2.setText("0");
 
+        lbColorJg2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        lbColorJg2.setForeground(new java.awt.Color(204, 0, 153));
         lbColorJg2.setText("Color");
 
         fondoApuestaJugador3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        fondoApuestaJugador3.setText("Fondo de apuesta");
+        fondoApuestaJugador3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoDeApuesta.png"))); // NOI18N
 
         lbFondoApuestaJg3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lbFondoApuestaJg3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbFondoApuestaJg3.setText("0");
 
+        lbColorJg3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        lbColorJg3.setForeground(new java.awt.Color(204, 0, 153));
         lbColorJg3.setText("Color");
 
         fondoApuestaJugador4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        fondoApuestaJugador4.setText("Fondo de apuesta");
+        fondoApuestaJugador4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoDeApuesta.png"))); // NOI18N
 
         lbFondoApuestaJg4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lbFondoApuestaJg4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbFondoApuestaJg4.setText("0");
 
+        lbColorJg4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        lbColorJg4.setForeground(new java.awt.Color(204, 0, 204));
         lbColorJg4.setText("Color");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -166,7 +184,7 @@ public class ventanaTablero extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 371, Short.MAX_VALUE)
+                .addGap(0, 890, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton1)
@@ -178,92 +196,88 @@ public class ventanaTablero extends javax.swing.JFrame {
                         .addComponent(jButton4)
                         .addGap(357, 357, 357))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbMontoApuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(256, 256, 256)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbMontoApuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(22, 22, 22)))
+                        .addGap(286, 286, 286)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(fondoApuestaJugador4, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(lbFondoApuestaJg4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(lbFondoApuestaJg4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbJugador4))
                         .addGap(32, 32, 32))))
             .addGroup(layout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addComponent(lbColorJg1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbColorJg3)
+                .addGap(121, 121, 121))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(114, 114, 114)
+                .addComponent(lbColorJg2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbColorJg4)
+                .addGap(129, 129, 129))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(lbJugador1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(fondoApuestaJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbJugador2)
+                        .addGap(103, 1536, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(fondoApuestaJugador1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(fondoApuestaJugador3, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lbFondoApuestaJg1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(fondoApuestaJugador2, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lbFondoApuestaJg2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(lbFondoApuestaJg3, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(8, 8, 8)))))
-                .addGap(24, 24, 24))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addComponent(lbColorJg1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbColorJg3)
-                .addGap(121, 121, 121))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addComponent(lbJugador2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbJugador4)
-                .addGap(103, 103, 103))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(117, 117, 117)
-                .addComponent(lbColorJg2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbColorJg4)
-                .addGap(139, 139, 139))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbJugador3)
-                .addGap(84, 84, 84))
+                                .addGap(8, 8, 8)))
+                        .addGap(24, 24, 24))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lbJugador1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbJugador3)
+                        .addGap(40, 40, 40))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbJugador3)
+                    .addComponent(lbJugador1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbColorJg1)
+                    .addComponent(lbColorJg3))
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(51, 51, 51)
-                                .addComponent(lbJugador1)
-                                .addGap(14, 14, 14))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(lbJugador3)
-                                .addGap(18, 18, 18)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbColorJg1)
-                            .addComponent(lbColorJg3))
-                        .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(fondoApuestaJugador1)
                             .addComponent(fondoApuestaJugador3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbFondoApuestaJg1))
-                    .addComponent(lbFondoApuestaJg3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 279, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                        .addComponent(lbFondoApuestaJg3)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 699, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbJugador2)
                     .addComponent(lbJugador4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbColorJg2)
-                    .addComponent(lbColorJg4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbColorJg4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbColorJg2))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -273,16 +287,14 @@ public class ventanaTablero extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(fondoApuestaJugador2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbFondoApuestaJg2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbMontoApuesta)))))
+                            .addComponent(fondoApuestaJugador2)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbFondoApuestaJg2)
+                            .addComponent(lbMontoApuesta))))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton2)
                     .addComponent(jButton4)
                     .addComponent(jButton1)
