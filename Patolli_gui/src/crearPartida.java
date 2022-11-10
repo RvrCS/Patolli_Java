@@ -1,5 +1,6 @@
 
 import entidades.Juego;
+import javax.swing.JOptionPane;
 import javax.xml.bind.ParseConversionEvent;
 
 public class crearPartida extends javax.swing.JFrame {
@@ -200,12 +201,18 @@ public class crearPartida extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
-	this.setVisible(false);
-	Juego.getInstance().setNumCasillasAspa(Integer.parseInt(this.lbValorCasilla.getText()));
-	Juego.getInstance().setFondoFijo(Integer.parseInt(this.lbValorFondo.getText()));
-	Juego.getInstance().setApuesta(Integer.parseInt(this.lbMontoApuesta.getText()));
-	ventanaTablero.getInstance().inicializar();
-	crearJugador.getInstance().setVisible(true);
+		if (Juego.getInstance().ispCreada() == false) {
+			this.setVisible(false);
+			Juego.getInstance().setNumCasillasAspa(Integer.parseInt(this.lbValorCasilla.getText()));
+			Juego.getInstance().setFondoFijo(Integer.parseInt(this.lbValorFondo.getText()));
+			Juego.getInstance().setApuesta(Integer.parseInt(this.lbMontoApuesta.getText()));
+			Juego.getInstance().setpCreada(true);
+			ventanaTablero.getInstance().inicializar();
+			crearJugador.getInstance().setVisible(true);
+		} else {
+			JOptionPane.showMessageDialog(null, "Una partida ya ha sido creada");
+		}
+
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed

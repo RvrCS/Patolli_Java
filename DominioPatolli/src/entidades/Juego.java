@@ -9,7 +9,7 @@ public class Juego {
 	private int apuesta, fondoFijo,numCasillasAspa;
 	private List<Jugador> jugadores;
 	private static Juego singletonJuego;
-	
+	private boolean pCreada= false;
 	
 	public Juego(Tablero tablero, int apuesta, int fondoFijo,int numCasillasAspa, List<Jugador> jugadores) {
 		this.tablero = tablero;
@@ -70,4 +70,12 @@ public class Juego {
 		}
 		return singletonJuego;
 	}	
+
+	public boolean ispCreada() {
+		return pCreada;
+	}
+
+	public void setpCreada(boolean pCreada) {
+		this.pCreada = pCreada;
+	}
 }
