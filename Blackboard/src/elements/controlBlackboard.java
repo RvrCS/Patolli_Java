@@ -11,7 +11,7 @@ import observer.IObserver;
  *
  * @author River
  */
-public class control implements IObserver{
+public class controlBlackboard implements IObserver{
 
     @Override
     public void notifyObserver(String command, Object source) {
