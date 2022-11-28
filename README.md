@@ -1,4 +1,6 @@
 # Patolli Java
+![Patolli](https://user-images.githubusercontent.com/75063620/204179461-c6c80d18-4fec-4db4-b7df-5784029cde75.png)
+
 ## Equipo Blackboard
 - Torres Urrutia River Damian
 - Ruiz Tapia Joshiva Yzair
@@ -55,6 +57,8 @@ La estructura del patrón es la siguiente:
 - controlApuesta: Explicación
 
 # Diagrama de Paquetes
+![PatolliDP](https://user-images.githubusercontent.com/75063620/204177510-15243ac8-f9ff-42eb-a42f-7b542e444c6a.png)
+
 # Diagrama de Componentes
 ![PatolliDCOMP](https://user-images.githubusercontent.com/75063620/204172418-e90e5c8b-0b86-4caf-b8ac-bcbc0b41fd1e.png)
 
@@ -69,4 +73,10 @@ El componenete ***DominioPatolli*** es el que tiene implementada nuestras clases
 El componente ***Patolli_gui*** depende del componente ***blackboard*** para poder actualizar a cada cliente la *juego*, y el blackboard depender del dominio para la modificación del *juego*.
 
 # Diagrama de Despliegue
+![PatolliDD](https://user-images.githubusercontent.com/75063620/204178947-0491a0b1-400e-4e2c-aabb-b1b399215795.png)
+
+**Nodos** <br>
+- **Client:** El nodo client es donde el usuario en su PC tendra los componentes de patolli_gui el cual le mostrara la interfaz de Patolli, y tambien contiene el subsistema ClienteSocket. <br>
+- **Server:** El nodo server es la misma PC del usuario en donde tendra los componentes blackboard para controlar lo que pasara en la interfaz Patolli, tambien contiene el subsistema ServerSocket para recibir los clientes y enviar actualizaciones al juego de cada jugador. <br>
+Estos nodos se comunicaran a través de un puerto TCP/IP por medio de los subsistemas sockets de cada nodo.
 
