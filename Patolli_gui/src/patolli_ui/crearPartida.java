@@ -1,3 +1,5 @@
+package patolli_ui;
+
 
 import entidades.Juego;
 import javax.swing.JOptionPane;

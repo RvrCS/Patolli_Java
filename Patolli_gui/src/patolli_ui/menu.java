@@ -1,3 +1,5 @@
+package patolli_ui;
+
 
 import javax.swing.ImageIcon;
 
