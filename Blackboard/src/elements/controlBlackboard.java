@@ -32,13 +32,11 @@ public class controlBlackboard implements IObserver{
     
     @Override
     public void notifyObserver(String command, Object source) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    public void loop(){
         for (IFuenteConocimiento fuente : fuentesC) {
-            fuente.updateBlackboard();
+            fuente.updateBlackboard(command);
         }
     }
+    
+
     
 }

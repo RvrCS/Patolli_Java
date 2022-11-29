@@ -14,23 +14,14 @@ import entidades.Juego;
 public class controlPartida implements IFuenteConocimiento{
 
     @Override
-    public void updateBlackboard() {
-        if(Juego.getInstance() != null){
-           this.agregarJugador();
+    public void updateBlackboard(String command) {
+        if(command.equalsIgnoreCase("partidaCreada")){
+            this.unirsePartida();
         }
-        
     }
     
-    public void agregarJugador(){
-        System.out.println("Jugador agregado a partida");
+    public void unirsePartida(){
+        //Actualizacion del blackboard (Juego)
+        System.out.println("Jugador se unio");
     }
-    
-    public void pasarTurno(){
-        System.out.println("Siguiente jugador");
-    }
-    
-    public void terminarPartida(){
-        
-    }
-    
 }

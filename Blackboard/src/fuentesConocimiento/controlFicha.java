@@ -11,8 +11,10 @@ package fuentesConocimiento;
  */
 public class controlFicha implements IFuenteConocimiento{
 
+
+
     @Override
-    public void updateBlackboard() {
+    public void updateBlackboard(String command) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
