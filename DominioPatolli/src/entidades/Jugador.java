@@ -1,11 +1,14 @@
 package entidades;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Jugador {
 
 	private String nombre;
 	private int fondo;
 	private String color;
-
+        private List<Ficha> fichas = new ArrayList<>();
 	public Jugador(String nombre, int fondo) {
 		this.nombre = nombre;
 		this.fondo = fondo;
@@ -37,4 +40,16 @@ public class Jugador {
 	public void setColor(String color) {
 		this.color = color;
 	}
+
+    public List<Ficha> getFichas() {
+        return fichas;
+    }
+
+    public void setFichas() {
+        for (int i = 0; i < 6; i++) {
+            this.fichas.add(new Ficha(false,null,null));
+        }
+    }
+        
+        
 }

@@ -131,34 +131,15 @@ public class crearJugador extends javax.swing.JFrame {
 		jugador.setNombre(this.txtNombre.getText());
 		jugador.setFondo(Juego.getInstance().getFondoFijo());
 		jugador.setColor(color);
-		
+                jugador.setFichas();
+                System.out.println(jugador.getFichas().toString());
+                
 		Juego.getInstance().addJugador(jugador);
 		
 		ventanaTablero.getInstance().pintarTablero();
-		
-
 		ventanaTablero.getInstance().lbJugador1.setText(Juego.getInstance().getListaJugador().get(0).getNombre());
 		ventanaTablero.getInstance().lbColorJg1.setText(Juego.getInstance().getListaJugador().get(0).getColor());
-		
-		
-		if (Juego.getInstance().getListaJugador().size()>1) {
-			if (Juego.getInstance().getListaJugador().get(1)!=null) {
-				ventanaTablero.getInstance().lbJugador2.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
-				ventanaTablero.getInstance().lbColorJg2.setText(Juego.getInstance().getListaJugador().get(1).getColor());
-			}
-		}
-		if (Juego.getInstance().getListaJugador().size()>2) {
-			if (Juego.getInstance().getListaJugador().get(2)!=null) {
-				ventanaTablero.getInstance().lbJugador3.setText(Juego.getInstance().getListaJugador().get(2).getNombre());
-				ventanaTablero.getInstance().lbColorJg3.setText(Juego.getInstance().getListaJugador().get(2).getColor());
-			}
-		}
-		if (Juego.getInstance().getListaJugador().size()>3) {
-			if (Juego.getInstance().getListaJugador().get(3)!=null) {
-				ventanaTablero.getInstance().lbJugador4.setText(Juego.getInstance().getListaJugador().get(3).getNombre());
-				ventanaTablero.getInstance().lbColorJg4.setText(Juego.getInstance().getListaJugador().get(3).getColor());
-			}
-		}
+
 		ventanaTablero.getInstance().setVisible(true);
 		
 		this.txtNombre.setText("");

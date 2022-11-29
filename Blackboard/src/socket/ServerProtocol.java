@@ -9,5 +9,8 @@ package socket;
  * @author rvrso
  */
 public class ServerProtocol {
-    
+    public String processInput(String theInput) {
+        return null;
+    }
+     
 }

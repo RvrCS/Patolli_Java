@@ -1,7 +1,6 @@
 package entidades;
 
 public class Casilla {
-	private boolean disponible;
 	private Ficha ficha;
 	private int coordenadaX;
 	private int coordenadaY;
@@ -9,7 +8,7 @@ public class Casilla {
 	private LugarSemicirculo lugarcirculo;
 	private LugarTriangulo lugarTriangulo;
 	private String tipoCasilla;
-	
+        
 	public Casilla() {
 		
 	}
