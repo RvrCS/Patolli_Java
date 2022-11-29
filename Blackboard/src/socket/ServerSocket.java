@@ -9,6 +9,13 @@ package socket;
  *
  * @author River
  */
-public class ServerSocket {
+public class ServerSocket implements Runnable{
+
+    @Override
+    public void run() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
     
 }

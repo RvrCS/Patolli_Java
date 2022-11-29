@@ -5,6 +5,7 @@
  */
 package elements;
 
+import entidades.Juego;
 import observer.AbstractObservable;
 
 /**
@@ -12,5 +13,7 @@ import observer.AbstractObservable;
  * @author River
  */
 public class blackboard extends AbstractObservable{
+    
+    public static Juego juego = Juego.getInstance();
     
 }

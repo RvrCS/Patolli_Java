@@ -9,6 +9,11 @@ package fuentesConocimiento;
  *
  * @author River
  */
-public class controlApuesta {
+public class controlApuesta implements IFuenteConocimiento {
+
+    @Override
+    public void updateBlackboard() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

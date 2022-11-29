@@ -1,9 +1,10 @@
 package entidades;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Juego {
+public class Juego implements Serializable {
 
 	private Tablero tablero;
 	private int apuesta, fondoFijo,numCasillasAspa;
@@ -64,7 +65,7 @@ public class Juego {
 		return this.jugadores;
 	}
 	
-	public static  Juego getInstance(){
+	public static Juego getInstance(){
 		if (singletonJuego == null) {
 			singletonJuego = new Juego();
 		}
