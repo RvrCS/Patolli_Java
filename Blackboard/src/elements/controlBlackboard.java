@@ -5,7 +5,7 @@
  */
 package elements;
 
-import fuentesConocimiento.IFuenteConocimiento;
+import fuentesConocimiento.*;
 import java.util.ArrayList;
 import java.util.List;
 import observer.IObserver;
@@ -18,10 +18,27 @@ public class controlBlackboard implements IObserver{
 
     private List<IFuenteConocimiento> fuentesC = new ArrayList<>();
     
+    public controlBlackboard(){
+        this.inicializar();
+    }
+    
+    private void inicializar(){
+        
+        fuentesC.add(new controlPartida());
+        fuentesC.add(new controlFicha());
+        fuentesC.add(new controlApuesta());
+        
+    }
+    
     @Override
     public void notifyObserver(String command, Object source) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public void loop(){
+        for (IFuenteConocimiento fuente : fuentesC) {
+            fuente.updateBlackboard();
+        }
+    }
     
 }

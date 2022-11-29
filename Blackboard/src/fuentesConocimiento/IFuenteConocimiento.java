@@ -5,6 +5,7 @@
  */
 package fuentesConocimiento;
 
+import elements.blackboard;
 import entidades.Juego;
 
 /**
@@ -13,7 +14,7 @@ import entidades.Juego;
  */
 public interface IFuenteConocimiento {
     
-    public static Juego juego = Juego.getInstance();
+
     
     public void updateBlackboard();
     

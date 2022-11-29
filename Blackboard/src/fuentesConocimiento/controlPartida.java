@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package fuentesConocimiento;
+
+import entidades.Juego;
+
 /**
  *
  * @author River
@@ -12,10 +15,22 @@ public class controlPartida implements IFuenteConocimiento{
 
     @Override
     public void updateBlackboard() {
-        String comand = "apuesta1";
-        if(comand.equalsIgnoreCase("apuesta1")){
-           
+        if(Juego.getInstance() != null){
+           this.agregarJugador();
         }
+        
+    }
+    
+    public void agregarJugador(){
+        System.out.println("Jugador agregado a partida");
+    }
+    
+    public void pasarTurno(){
+        System.out.println("Siguiente jugador");
+    }
+    
+    public void terminarPartida(){
+        
     }
     
 }
