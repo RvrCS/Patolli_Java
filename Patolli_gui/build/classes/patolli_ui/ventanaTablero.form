@@ -32,73 +32,47 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
-              <Component id="lbJugador1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="802" pref="802" max="-2" attributes="0"/>
-              <Component id="lbJugador3" min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="111" pref="111" max="-2" attributes="0"/>
-              <Component id="lbColorJg1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="970" pref="970" max="-2" attributes="0"/>
-              <Component id="lbColorJg3" min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
-              <Component id="fondoApuestaJugador1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="803" pref="803" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="fondoApuestaJugador3" min="-2" pref="217" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
-                      <Component id="lbFondoApuestaJg3" min="-2" pref="195" max="-2" attributes="0"/>
+                      <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
+                      <Component id="lbJugador1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="802" pref="802" max="-2" attributes="0"/>
+                      <Component id="lbJugador3" min="-2" max="-2" attributes="0"/>
                   </Group>
-              </Group>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
-              <Component id="lbFondoApuestaJg1" min="-2" pref="195" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
-              <Component id="lbJugador2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="802" pref="802" max="-2" attributes="0"/>
-              <Component id="lbJugador4" min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="114" pref="114" max="-2" attributes="0"/>
-              <Component id="lbColorJg2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="959" pref="959" max="-2" attributes="0"/>
-              <Component id="lbColorJg4" min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="fondoApuestaJugador2" min="-2" pref="217" max="-2" attributes="0"/>
-                  <Component id="lbFondoApuestaJg2" min="-2" pref="195" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="786" pref="786" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="fondoApuestaJugador4" min="-2" pref="217" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
+                      <EmptySpace min="111" pref="111" max="-2" attributes="0"/>
+                      <Component id="lbColorJg1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="970" pref="970" max="-2" attributes="0"/>
+                      <Component id="lbColorJg3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
+                      <Component id="lbJugador2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="802" pref="802" max="-2" attributes="0"/>
+                      <Component id="lbJugador4" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="114" pref="114" max="-2" attributes="0"/>
+                      <Component id="lbColorJg2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="959" pref="959" max="-2" attributes="0"/>
+                      <Component id="lbColorJg4" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="lbFondoApuestaJg4" min="-2" pref="195" max="-2" attributes="0"/>
+                      <Component id="lbMontoApuesta" min="-2" pref="92" max="-2" attributes="0"/>
+                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Component id="jButton4" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
-              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="lbMontoApuesta" min="-2" pref="92" max="-2" attributes="0"/>
-              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -115,15 +89,7 @@
                   <Component id="lbColorJg1" min="-2" max="-2" attributes="0"/>
                   <Component id="lbColorJg3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="fondoApuestaJugador1" min="-2" max="-2" attributes="0"/>
-                  <Component id="fondoApuestaJugador3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbFondoApuestaJg3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="lbFondoApuestaJg1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="231" pref="231" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="340" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lbJugador2" min="-2" max="-2" attributes="0"/>
                   <Component id="lbJugador4" min="-2" max="-2" attributes="0"/>
@@ -133,21 +99,7 @@
                   <Component id="lbColorJg2" min="-2" max="-2" attributes="0"/>
                   <Component id="lbColorJg4" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
-                      <Component id="fondoApuestaJugador2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="lbFondoApuestaJg2" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="fondoApuestaJugador4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                      <Component id="lbFondoApuestaJg4" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
@@ -167,28 +119,6 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="fondoApuestaJugador1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="24" style="1"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/fondoDeApuesta.png"/>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lbFondoApuestaJg1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="24" style="1"/>
-        </Property>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="0"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
     <Component class="javax.swing.JLabel" name="lbMontoApuesta">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -262,6 +192,9 @@
           <Image iconType="3" name="/imagenes/btn_tirarCa&#xf1;as2.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lbJugador1">
       <Properties>
@@ -333,28 +266,6 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="fondoApuestaJugador2">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="24" style="1"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/fondoDeApuesta.png"/>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lbFondoApuestaJg2">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="24" style="1"/>
-        </Property>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="0"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
     <Component class="javax.swing.JLabel" name="lbColorJg2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -369,28 +280,6 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="fondoApuestaJugador3">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="24" style="1"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/fondoDeApuesta.png"/>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lbFondoApuestaJg3">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="24" style="1"/>
-        </Property>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="0"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
     <Component class="javax.swing.JLabel" name="lbColorJg3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -400,28 +289,6 @@
           <Color blue="99" green="0" red="cc" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Color"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JLabel" name="fondoApuestaJugador4">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="24" style="1"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/fondoDeApuesta.png"/>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lbFondoApuestaJg4">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="24" style="1"/>
-        </Property>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

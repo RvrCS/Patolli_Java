@@ -12,7 +12,7 @@ public class blackboard extends AbstractObservable{
 
 
    public void añadirJugador(Jugador jugador){
-       juego.addJugador((Jugador)jugador);
+       juego.addJugador(jugador);
        notifyAll();
    }
     
