@@ -1,20 +1,20 @@
 package patolli_ui;
 
-
+import elements.blackboard;
 import entidades.Juego;
 import entidades.Jugador;
 
-
 public class crearJugador extends javax.swing.JFrame {
-		
-	private static crearJugador singeltonCJ;
-	private String color;
-            crearPartida cP = new crearPartida();
-	public crearJugador() {
-		initComponents();
-	}
 
-	@SuppressWarnings("unchecked")
+    private static crearJugador singeltonCJ;
+    private String color;
+    crearPartida cP = new crearPartida();
+
+    public crearJugador() {
+        initComponents();
+    }
+
+    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -111,146 +111,174 @@ public class crearJugador extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-	/**
-	 *Método que regresa de pantalla
-	 * @param evt 
-	 */
+    /**
+     * Método que regresa de pantalla
+     *
+     * @param evt
+     */
     private void btn_AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AtrasActionPerformed
-	this.dispose();
-	menu.getInstance().setVisible(true);
-		
+        this.dispose();
+        menu.getInstance().setVisible(true);
+
     }//GEN-LAST:event_btn_AtrasActionPerformed
 
-	/**
-	 * Método que establece todos los valores puestos de la interfaz de usuario
-	 * @param evt 
-	 */
+    /**
+     * Método que establece todos los valores puestos de la interfaz de usuario
+     *
+     * @param evt
+     */
     private void btn_ConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ConfirmarActionPerformed
-        
-		Jugador jugador  = new Jugador();
-		jugador.setNombre(this.txtNombre.getText());
-		jugador.setFondo(Juego.getInstance().getFondoFijo());
-		jugador.setColor(color);
-                jugador.setFichas();
-                System.out.println(jugador.getFichas().toString());
-                
-		Juego.getInstance().addJugador(jugador);
-		
-		ventanaTablero.getInstance().pintarTablero();
-		ventanaTablero.getInstance().lbJugador1.setText(Juego.getInstance().getListaJugador().get(0).getNombre());
-		ventanaTablero.getInstance().lbColorJg1.setText(Juego.getInstance().getListaJugador().get(0).getColor());
 
-		ventanaTablero.getInstance().setVisible(true);
-		
-		this.txtNombre.setText("");
-		this.dispose();
-		
-		if (this.color.equalsIgnoreCase("morado")) {
-			this.btnMorado.setVisible(false);
-			this.color="";
-		}
-		if (this.color.equalsIgnoreCase("amarillo")) {
-			this.btnAmarillo.setVisible(false);
-			this.color="";
-		}
-		if (this.color.equalsIgnoreCase("rojo")) {
-			this.btnRojo.setVisible(false);
-			this.color="";
-		}
-		if (this.color.equalsIgnoreCase("verde")) {
-			this.btnVerde.setVisible(false);
-			this.color="";
-		}
+        Jugador jugador = new Jugador();
+        jugador.setNombre(this.txtNombre.getText());
+        jugador.setFondo(Juego.getInstance().getFondoFijo());
+        jugador.setColor(color);
+        jugador.setFichas();
+//        System.out.println(jugador.getFichas().toString());
+
+        blackboard b = new blackboard();
+        b.añadirJugador(jugador);
+
+        ventanaTablero.getInstance().pintarTablero();
+        ventanaTablero.getInstance().lbJugador1.setText(Juego.getInstance().getListaJugador().get(0).getNombre());
+        ventanaTablero.getInstance().lbColorJg1.setText(Juego.getInstance().getListaJugador().get(0).getColor());
+
+        if (Juego.getInstance().getListaJugador().size() > 1) {
+            if (Juego.getInstance().getListaJugador().get(1) != null) {
+                ventanaTablero.getInstance().lbJugador2.setText(Juego.getInstance().getListaJugador().get(1).getNombre());
+                ventanaTablero.getInstance().lbColorJg2.setText(Juego.getInstance().getListaJugador().get(1).getColor());
+            }
+        }
+        if (Juego.getInstance().getListaJugador().size() > 2) {
+            if (Juego.getInstance().getListaJugador().get(2) != null) {
+                ventanaTablero.getInstance().lbJugador3.setText(Juego.getInstance().getListaJugador().get(2).getNombre());
+                ventanaTablero.getInstance().lbColorJg3.setText(Juego.getInstance().getListaJugador().get(2).getColor());
+            }
+        }
+        if (Juego.getInstance().getListaJugador().size() > 3) {
+            if (Juego.getInstance().getListaJugador().get(3) != null) {
+                ventanaTablero.getInstance().lbJugador4.setText(Juego.getInstance().getListaJugador().get(3).getNombre());
+                ventanaTablero.getInstance().lbColorJg4.setText(Juego.getInstance().getListaJugador().get(3).getColor());
+            }
+        }
+
+        ventanaTablero.getInstance().setVisible(true);
+
+        this.txtNombre.setText("");
+        this.dispose();
+
+        if (this.color.equalsIgnoreCase("morado")) {
+            this.btnMorado.setVisible(false);
+            this.color = "";
+        }
+        if (this.color.equalsIgnoreCase("amarillo")) {
+            this.btnAmarillo.setVisible(false);
+            this.color = "";
+        }
+        if (this.color.equalsIgnoreCase("rojo")) {
+            this.btnRojo.setVisible(false);
+            this.color = "";
+        }
+        if (this.color.equalsIgnoreCase("verde")) {
+            this.btnVerde.setVisible(false);
+            this.color = "";
+        }
     }//GEN-LAST:event_btn_ConfirmarActionPerformed
-	/**
-	 * Método que establece el color del jugador
-	 * @param evt 
-	 */
+    /**
+     * Método que establece el color del jugador
+     *
+     * @param evt
+     */
     private void btnMoradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoradoActionPerformed
-		this.color = "morado";
-		this.btnMorado.setSelected(true);
-		this.btnAmarillo.setSelected(false);
-		this.btnRojo.setSelected(false);
-		this.btnVerde.setSelected(false);
+        this.color = "morado";
+        this.btnMorado.setSelected(true);
+        this.btnAmarillo.setSelected(false);
+        this.btnRojo.setSelected(false);
+        this.btnVerde.setSelected(false);
     }//GEN-LAST:event_btnMoradoActionPerformed
-	/**
-	 * Método que establece el color del jugador
-	 * @param evt 
-	 */
+    /**
+     * Método que establece el color del jugador
+     *
+     * @param evt
+     */
     private void btnAmarilloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAmarilloActionPerformed
-		this.color = "amarillo";
-		this.btnMorado.setSelected(false);
-		this.btnAmarillo.setSelected(true);
-		this.btnRojo.setSelected(false);
-		this.btnVerde.setSelected(false);
+        this.color = "amarillo";
+        this.btnMorado.setSelected(false);
+        this.btnAmarillo.setSelected(true);
+        this.btnRojo.setSelected(false);
+        this.btnVerde.setSelected(false);
     }//GEN-LAST:event_btnAmarilloActionPerformed
-	/**
-	 * Método que establece el color del jugador
-	 * @param evt 
-	 */
+    /**
+     * Método que establece el color del jugador
+     *
+     * @param evt
+     */
     private void btnRojoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRojoActionPerformed
-		this.color = "rojo";
-		this.btnMorado.setSelected(false);
-		this.btnAmarillo.setSelected(false);
-		this.btnRojo.setSelected(true);
-		this.btnVerde.setSelected(false);
+        this.color = "rojo";
+        this.btnMorado.setSelected(false);
+        this.btnAmarillo.setSelected(false);
+        this.btnRojo.setSelected(true);
+        this.btnVerde.setSelected(false);
     }//GEN-LAST:event_btnRojoActionPerformed
-	/**
-	 * Método que establece el color del jugador
-	 * @param evt 
-	 */
+    /**
+     * Método que establece el color del jugador
+     *
+     * @param evt
+     */
     private void btnVerdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerdeActionPerformed
-		this.color = "verde";
-		this.btnMorado.setSelected(false);
-		this.btnAmarillo.setSelected(false);
-		this.btnRojo.setSelected(false);
-		this.btnVerde.setSelected(true);
+        this.color = "verde";
+        this.btnMorado.setSelected(false);
+        this.btnAmarillo.setSelected(false);
+        this.btnRojo.setSelected(false);
+        this.btnVerde.setSelected(true);
     }//GEN-LAST:event_btnVerdeActionPerformed
-	/**
-	 * Método que regresa una instacia de la clase.
-	 * @return Regresa la misma instancia ya creada de la pantalla crear jugador. 
-	 */
-	public static crearJugador getInstance(){
-		if (singeltonCJ == null) {
-			singeltonCJ = new crearJugador();
-		}
-		return singeltonCJ;
-	}
-	
-	/**
-	 * @param args the command line arguments
-	 */
-	public static void main(String args[]) {
-		/* Set the Nimbus look and feel */
-		//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-		/* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-		 */
-		try {
-			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-				if ("Nimbus".equals(info.getName())) {
-					javax.swing.UIManager.setLookAndFeel(info.getClassName());
-					break;
-				}
-			}
-		} catch (ClassNotFoundException ex) {
-			java.util.logging.Logger.getLogger(crearJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		} catch (InstantiationException ex) {
-			java.util.logging.Logger.getLogger(crearJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		} catch (IllegalAccessException ex) {
-			java.util.logging.Logger.getLogger(crearJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-			java.util.logging.Logger.getLogger(crearJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		}
-		//</editor-fold>
+    /**
+     * Método que regresa una instacia de la clase.
+     *
+     * @return Regresa la misma instancia ya creada de la pantalla crear
+     * jugador.
+     */
+    public static crearJugador getInstance() {
+        if (singeltonCJ == null) {
+            singeltonCJ = new crearJugador();
+        }
+        return singeltonCJ;
+    }
 
-		/* Create and display the form */
-		java.awt.EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				new crearJugador().setVisible(true);
-			}
-		});
-	}
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(crearJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(crearJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(crearJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(crearJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new crearJugador().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAmarillo;

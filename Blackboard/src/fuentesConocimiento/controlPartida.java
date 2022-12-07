@@ -5,7 +5,8 @@
  */
 package fuentesConocimiento;
 
-import entidades.Juego;
+import elements.blackboard;
+import entidades.Jugador;
 
 /**
  *
@@ -14,14 +15,18 @@ import entidades.Juego;
 public class controlPartida implements IFuenteConocimiento{
 
     @Override
-    public void updateBlackboard(String command) {
+    public void updateBlackboard(String command, Object obj) {
         if(command.equalsIgnoreCase("partidaCreada")){
-            this.unirsePartida();
+            this.unirsePartida(obj);
         }
     }
     
-    public void unirsePartida(){
-        //Actualizacion del blackboard (Juego)
-        System.out.println("Jugador se unio");
+    public void unirsePartida(Object obj){
+        Jugador jugador = (Jugador)obj;
+        blackboard.juego.addJugador(jugador);
+        
+        
+        
+        System.out.println("NOTIFICADO!: \nJugador: "+ jugador.getNombre() + "se unio a la partida!");
     }
 }

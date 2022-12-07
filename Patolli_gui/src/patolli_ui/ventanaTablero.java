@@ -1,6 +1,7 @@
 package patolli_ui;
 
 import dibujado.tableroCanvas;
+import elements.controlBlackboard;
 import entidades.Juego;
 import entidades.Tablero;
 import java.awt.Dimension;
@@ -49,9 +50,9 @@ public class ventanaTablero extends javax.swing.JFrame {
 		tbCanvas.setCasillas(Juego.getInstance().getTablero().getCasillas());
 		this.repaint();
 	
-		for (int i = 0; i < Juego.getInstance().getListaJugador().size(); i++) {
-			System.out.println(Juego.getInstance().getListaJugador().get(i).getNombre());
-		}
+//		for (int i = 0; i < Juego.getInstance().getListaJugador().size(); i++) {
+//			System.out.println(Juego.getInstance().getListaJugador().get(i).getNombre());
+//		}
 	}
    
 @SuppressWarnings("unchecked")
@@ -100,6 +101,11 @@ public class ventanaTablero extends javax.swing.JFrame {
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_moverFicha.png"))); // NOI18N
         jButton2.setContentAreaFilled(false);
         jButton2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_moverFicha2.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_sacarFicha.png"))); // NOI18N
         jButton3.setContentAreaFilled(false);
@@ -233,6 +239,11 @@ public class ventanaTablero extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;

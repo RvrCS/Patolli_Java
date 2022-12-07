@@ -29,6 +29,7 @@ public abstract class AbstractObservable implements IObservable{
     @Override
     public void notifyObservers(String command, Object source) {
         for (IObserver observer : observers) {
+            System.out.println("NOTIFIQUE!");
             observer.notifyObserver(command, source);
         }
     }

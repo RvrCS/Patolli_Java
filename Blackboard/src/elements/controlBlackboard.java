@@ -33,7 +33,7 @@ public class controlBlackboard implements IObserver{
     @Override
     public void notifyObserver(String command, Object source) {
         for (IFuenteConocimiento fuente : fuentesC) {
-            fuente.updateBlackboard(command);
+            fuente.updateBlackboard(command, source);
         }
     }
     

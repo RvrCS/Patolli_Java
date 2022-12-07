@@ -16,6 +16,6 @@ public interface IFuenteConocimiento {
     
 
     
-    public void updateBlackboard(String command);
+    public void updateBlackboard(String command, Object obj);
     
 }
