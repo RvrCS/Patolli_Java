@@ -44,8 +44,8 @@ En esta clase podemos observar como la clase juego utiliza el patrón Singleton 
 - **tableroCanvas:** Clase que se encarga de dibujar el tablero.
 - **dibujaCasilla:** Clase que se encarga de dibujar las casillas después de que el tablero canvas fue creado, en esta clase existe un método para crear cada tipo de casilla que conforman el tablero es decir se encarga de dibujar las casillas de en medio, casillas al final de las aspas, casillas triangulares, casilla exclusiva del jugador y por último las casillas normales.
 - **dibujaFicha:** Esta clase que se encarga de dibujar la ficha en la casilla correspondiente.
-- **ClienteSocket:** 
-- **ClienteHilo:**
+- **ClienteSocket:** Clase que se encarga de establecer una conexion con un sistema que este ejerciendo como servidor, y este se utiliza para emitir.
+- **ClienteHilo:** Clase que se encarga del flujo de control dentro del programa, esta es utilizada para ejecutar varias tareas simultaneamente.
 <br>En esta clase GUI Patolli, podemos observar que algunas clases tienen dependencia o asosciación directa. <br>
 Lo que hace que esto cambie es como se utilizaria en el codigo, si utilizamos dependencia a una clase, como por ejemplo en caso de crearPartida tiene dependencia de la clase creaJugador es porque en algun método del crearPartida estamos instanciado la clase creaJugador y utiliza algún método.<br>
 En el caso de la asociación directa en menu y crearPartida, se debe a que el menu tiene de atributo al crearPartida.<br>
@@ -64,8 +64,8 @@ En este diagrama tambien se ve implementado el patrón Singleton para poder tene
 - **controlFicha:** Es la encargada de establecer todos los métodos relacionados con la ficha y su función es la de realizar “X” acción en una ficha dependiendo el evento al que se responda.
 - **controlPartida:** Es la encargada de establecer todos los métodos relacionados que se utilizaran en la partida y su función es la de realizar “X” acción en la partida dependiendo el evento al que se responda.
 - **controlApuesta:** Es la encargada de establecer todos los métodos relacionados que se utilizan durante el pago de una apuesta en la partida y su función es la de realizar “X” acción dependiendo el evento al que responda.
-- **ServerSocketa:**
-- **ServerHilo:**
+- **ServerSocket:**Clase que se encarga de establecer una conexion de tipo servidor. y se encarga de responder a todas las peticiones entrantes que este
+- **ServerHilo:**Clase que se encarga del flujo de control dentro del programa, esta es utilizada para poder responder a varias tareas simultaneamente.
 En esta clase podemos ver claramente el patrón Observer que es lo que nos ayuda a visualizar cuando haya un cambio en nuestro blackboard para poder realizar cambios a la misma partida a través de las fuentes de conocimiento.
 
 # Diagrama de Paquetes
