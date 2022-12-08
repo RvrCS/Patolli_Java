@@ -23,7 +23,7 @@ La estructura del patrón es la siguiente:
 # Diagramas de Clases
 
 ## Dominio Patolli
-![DominioDC](https://user-images.githubusercontent.com/75063620/204172369-59413c8b-bd49-47a9-ab1c-dda3d0f84a4c.png)
+![DominioPatolli](https://user-images.githubusercontent.com/75063620/206385518-c59d5cc3-362a-4371-8e3e-caf90462a868.png)
 
 - Casilla: Se encarga de representar las casillas del tablero, para posteriormente poder ser usada dependiendo de su funcionalidad y del tipo de casillas que son.
 - **LugarTriangulo:** Se encarga de definir el tipo de casilla al momento de crearla.
@@ -31,10 +31,11 @@ La estructura del patrón es la siguiente:
 - **Ficha:** Es la encargada de representar una ficha en el juego y su función es la de representar los movimientos en el tablero de un jugador y condicionar si un - jugador es ganador del juego o no.
 - **Tablero:** Es la encargada de guardar todas las casillas generadas en el juego y su función es servir como almacén para poder utilizar las casillas durante el - juego.
 - **Juego:** Es la encargada de guardar toda la información en el juego, en esta clase se realizan todos los cambios que vayan ocurriendo durante la sesión del juego, así mismo se establecen las reglas del juego.
-- **Jugador:** Es la encargada de representar a un jugador y su función es la de guardar la información del mismo, como fichas, nombre, color y fondo del jugador.
+- **Jugador:** Es la encargada de representar a un jugador y su función es la de guardar la información del mismo, como fichas, nombre, color y fondo del jugador. <br>
+En esta clase podemos observar como la clase juego utiliza el patrón Singleton para poder tener una instancia de juego en toda la ejecución del codigo.
 
 ## GUI Patolli
-![PatolliguiDC](https://user-images.githubusercontent.com/75063620/204172394-dbe8c1eb-6b84-49d5-894c-d8c93e9eb0c0.png)
+![GuiPatolli](https://user-images.githubusercontent.com/75063620/206385548-4207b152-921f-4200-b1f4-3575ef2e0934.png)
 
 - **menu:** GUI que se encarga de mostrar al usuario la opción de crear una partida, unirse a una partida existente o simplemente salir del juego.
 - **crearPartida:** El usuario al crear una partida configura el número de casillas por aspa, configura el número de jugadores, fondo de apuesta, cabe mencionar que el fondo de apuesta es configurable al igual que el monto por apuesta.
@@ -43,9 +44,16 @@ La estructura del patrón es la siguiente:
 - **tableroCanvas:** Clase que se encarga de dibujar el tablero.
 - **dibujaCasilla:** Clase que se encarga de dibujar las casillas después de que el tablero canvas fue creado, en esta clase existe un método para crear cada tipo de casilla que conforman el tablero es decir se encarga de dibujar las casillas de en medio, casillas al final de las aspas, casillas triangulares, casilla exclusiva del jugador y por último las casillas normales.
 - **dibujaFicha:** Esta clase que se encarga de dibujar la ficha en la casilla correspondiente.
+- **ClienteSocket:** 
+- **ClienteHilo:**
+<br>En esta clase GUI Patolli, podemos observar que algunas clases tienen dependencia o asosciación directa. <br>
+Lo que hace que esto cambie es como se utilizaria en el codigo, si utilizamos dependencia a una clase, como por ejemplo en caso de crearPartida tiene dependencia de la clase creaJugador es porque en algun método del crearPartida estamos instanciado la clase creaJugador y utiliza algún método.<br>
+En el caso de la asociación directa en menu y crearPartida, se debe a que el menu tiene de atributo al crearPartida.<br>
+En este diagrama tambien se ve implementado el patrón Singleton para poder tener 1 misma instancia y regresar esa misma instancia a los demas jugadores que vayan a necesitar usar los frames.
+
 
 ## Blackboard Patolli
-![BlackboardDC](https://user-images.githubusercontent.com/75063620/204172403-0c95b0f9-3281-40d1-aa19-99b351f65f7e.png)
+![BlackboardPatolli](https://user-images.githubusercontent.com/75063620/206385587-e5949baa-df2b-4d07-85ff-9d128aab25f1.png)
 
 - **IObservable:** Clase abstracta que propina información de notificación
 - **AbstractObservable:** Clase encargada de crear observables, estableciendo una estructura fija que todo quien heredé de él debe tener.
@@ -56,12 +64,15 @@ La estructura del patrón es la siguiente:
 - **controlFicha:** Es la encargada de establecer todos los métodos relacionados con la ficha y su función es la de realizar “X” acción en una ficha dependiendo el evento al que se responda.
 - **controlPartida:** Es la encargada de establecer todos los métodos relacionados que se utilizaran en la partida y su función es la de realizar “X” acción en la partida dependiendo el evento al que se responda.
 - **controlApuesta:** Es la encargada de establecer todos los métodos relacionados que se utilizan durante el pago de una apuesta en la partida y su función es la de realizar “X” acción dependiendo el evento al que responda.
+- **ServerSocketa:**
+- **ServerHilo:**
+En esta clase podemos ver claramente el patrón Observer que es lo que nos ayuda a visualizar cuando haya un cambio en nuestro blackboard para poder realizar cambios a la misma partida a través de las fuentes de conocimiento.
 
 # Diagrama de Paquetes
-![PatolliDP](https://user-images.githubusercontent.com/75063620/204177510-15243ac8-f9ff-42eb-a42f-7b542e444c6a.png)
+![PaquetesPatolli](https://user-images.githubusercontent.com/75063620/206385626-945b6a7c-8886-413b-9fc5-09046dc20e9d.png)
 
 # Diagrama de Componentes
-![PatolliDCOMP](https://user-images.githubusercontent.com/75063620/204172418-e90e5c8b-0b86-4caf-b8ac-bcbc0b41fd1e.png)
+![ComponentePatolli](https://user-images.githubusercontent.com/75063620/206385650-0b155c56-b5cc-4b8d-a64f-5d0cf30b67c9.png)
 
 En este diagrama de componentes podemos observar el componente ***patolli_gui*** el cual contiene todo el control de vista hacia el usuario. <br>
 Este mismo componente tiene un subsistema el cual se encarga del control del socket cliente. El cual no servira para la conexión entre un socket server.
@@ -80,3 +91,6 @@ El componente ***Patolli_gui*** depende del componente ***blackboard*** para pod
 - **Server:** El nodo server es la misma PC del usuario en donde tendra los componentes blackboard para controlar lo que pasara en la interfaz Patolli, tambien contiene el subsistema ServerSocket para recibir los clientes y enviar actualizaciones al juego de cada jugador. <br> <br>
 Estos nodos se comunicaran a través de un puerto TCP/IP por medio de los subsistemas sockets de cada nodo.
 
+# ADVERTENCIA
+En este codigo no se pudo implementar la arqutiectura blackboard utilizando ***SOCKETS***. <br>
+Se hizo una simulación de como interactuaria el código si estuviera conectado a sockets, utilizando directamente el proyecto ***blackboard*** para mandar a llamar lo que pasaria si enviaria por sockets.
