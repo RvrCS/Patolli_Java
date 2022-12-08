@@ -33,17 +33,17 @@ public class controlFicha implements IFuenteConocimiento {
         Random rad = new Random();
         int valor = rad.nextInt(6);
         blackboard.juego.setValorUltTiro(valor);
-        String nombre = blackboard.juego.getListaJugador().get(blackboard.juego.getTurnp()).getNombre();
+        String nombre = blackboard.juego.getListaJugador().get(blackboard.juego.getTurno()).getNombre();
         System.out.println("NOTIFICADO: " + "Jugador: " + nombre + " Se ha tirad las cañas: " + valor);
     }
 
     public void sacarFicha() {
-        String nombre = blackboard.juego.getListaJugador().get(blackboard.juego.getTurnp()).getNombre();
+        String nombre = blackboard.juego.getListaJugador().get(blackboard.juego.getTurno()).getNombre();
         System.out.println("NOTIFICADO: " + "Jugador: " + nombre + " Ha sacado una ficha");
     }
     
     public void moverFicha(){
-        String nombre = blackboard.juego.getListaJugador().get(blackboard.juego.getTurnp()).getNombre();
+        String nombre = blackboard.juego.getListaJugador().get(blackboard.juego.getTurno()).getNombre();
         System.out.println("NOTIFICADO: " + "Jugador: " + nombre + " Ha movido una ficha "+ blackboard.juego.getValorUltTiro()+" casillas");
     }
 

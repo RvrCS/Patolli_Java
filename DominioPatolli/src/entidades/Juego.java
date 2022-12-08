@@ -83,14 +83,14 @@ public class Juego implements Serializable {
 		this.pCreada = pCreada;
 	}
         
-        public void emepzarPartida(){
+        public void empezarPartida(){
             this.pIniciada = true;
         }
         
         public boolean getpIniciada(){
             return this.pIniciada;
         }
-        public int getTurnp(){
+        public int getTurno(){
             return this.turno;
         }
         

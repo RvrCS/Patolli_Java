@@ -44,7 +44,7 @@ public class controlPartida implements IFuenteConocimiento{
     }
     
     public void empezarPartida(){
-        blackboard.juego.emepzarPartida();
+        blackboard.juego.empezarPartida();
         System.out.println("NOTIFICADO: Se ha empezado la partida");
     }
     
