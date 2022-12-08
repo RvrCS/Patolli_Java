@@ -5,11 +5,16 @@
  */
 package observer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author River
  */
 public interface IObservable {
+   
+    final List<IObserver> observers = new ArrayList<>();
     
     public void addObserver(IObserver observer);
     public void removeObserver(IObserver observer);

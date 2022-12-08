@@ -16,7 +16,7 @@ public class controlPartida implements IFuenteConocimiento{
 
     @Override
     public void updateBlackboard(String command, Object obj) {
-        if(command.equalsIgnoreCase("partidaCreada")){
+        if(command.equalsIgnoreCase("unirJugador")){
             this.unirsePartida(obj);
         }
     }
@@ -25,8 +25,6 @@ public class controlPartida implements IFuenteConocimiento{
         Jugador jugador = (Jugador)obj;
         blackboard.juego.addJugador(jugador);
         
-        
-        
-        System.out.println("NOTIFICADO!: \nJugador: "+ jugador.getNombre() + "se unio a la partida!");
+        System.out.println("NOTIFICADO: Jugador "+ jugador.getNombre() + " se unio a la partida!");
     }
 }

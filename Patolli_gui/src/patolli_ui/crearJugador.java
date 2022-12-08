@@ -5,7 +5,7 @@ import entidades.Juego;
 import entidades.Jugador;
 
 public class crearJugador extends javax.swing.JFrame {
-
+    private blackboard b = new blackboard();
     private static crearJugador singeltonCJ;
     private String color;
     crearPartida cP = new crearPartida();
@@ -136,7 +136,7 @@ public class crearJugador extends javax.swing.JFrame {
         jugador.setFichas();
 //        System.out.println(jugador.getFichas().toString());
 
-        blackboard b = new blackboard();
+        
         b.añadirJugador(jugador);
 
         ventanaTablero.getInstance().pintarTablero();
