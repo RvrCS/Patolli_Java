@@ -6,6 +6,10 @@
 - Ruiz Tapia Joshiva Yzair
 - Soto López Nadia Alejandra
 
+# ADVERTENCIA
+En este codigo no se pudo implementar la arqutiectura blackboard utilizando ***SOCKETS***. <br>
+Se hizo una simulación de como interactuaria el código si estuviera conectado a sockets, utilizando directamente el proyecto ***blackboard*** para mandar a llamar lo que pasaria si enviaria por sockets.
+
 # Explicación de Patolli
 El patolli es un antiguo juego mesoamericano de azar y apuestas. Durante la época precolombina fue practicado por teotihuacanos, toltecas, mayas, aztecas y el resto de los pueblos conquistados por los grandes imperios. <br>
 El tablero es en forma de aspa (X), se permite de 2 a 4 jugadores por juego, cada jugador inicia con 6 fichas (cada jugador con su respectivo color) que irán avanzando por las casillas en dirección de las agujas del reloj, pasando por todas las casillas hasta llegar a la salida, que será la misma aspa por la que se inició.  <br>
@@ -91,6 +95,3 @@ El componente ***Patolli_gui*** depende del componente ***blackboard*** para pod
 - **Server:** El nodo server es la misma PC del usuario en donde tendra los componentes blackboard para controlar lo que pasara en la interfaz Patolli, tambien contiene el subsistema ServerSocket para recibir los clientes y enviar actualizaciones al juego de cada jugador. <br> <br>
 Estos nodos se comunicaran a través de un puerto TCP/IP por medio de los subsistemas sockets de cada nodo.
 
-# ADVERTENCIA
-En este codigo no se pudo implementar la arqutiectura blackboard utilizando ***SOCKETS***. <br>
-Se hizo una simulación de como interactuaria el código si estuviera conectado a sockets, utilizando directamente el proyecto ***blackboard*** para mandar a llamar lo que pasaria si enviaria por sockets.
