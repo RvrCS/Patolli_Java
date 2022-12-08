@@ -1,15 +1,17 @@
 package patolli_ui;
 
 import dibujado.tableroCanvas;
+import elements.blackboard;
 import elements.controlBlackboard;
 import entidades.Juego;
 import entidades.Tablero;
 import java.awt.Dimension;
+import javax.swing.JOptionPane;
 
 public class ventanaTablero extends javax.swing.JFrame {
 	private tableroCanvas tbCanvas;
 	private static ventanaTablero singletonTablero;
-	
+        
 	Tablero tablero = new Tablero();
 	
         public static ventanaTablero getInstance(){
@@ -62,10 +64,10 @@ public class ventanaTablero extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         lbMontoApuesta = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnRegresas = new javax.swing.JButton();
+        btnMoverFicha = new javax.swing.JButton();
+        btnSacarFicha = new javax.swing.JButton();
+        btnTirarCania = new javax.swing.JButton();
         lbJugador1 = new javax.swing.JLabel();
         lbJugador2 = new javax.swing.JLabel();
         lbJugador3 = new javax.swing.JLabel();
@@ -74,6 +76,7 @@ public class ventanaTablero extends javax.swing.JFrame {
         lbColorJg2 = new javax.swing.JLabel();
         lbColorJg3 = new javax.swing.JLabel();
         lbColorJg4 = new javax.swing.JLabel();
+        btnEmepzar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -87,37 +90,45 @@ public class ventanaTablero extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(204, 0, 153));
         jLabel2.setText("Monto por apuesta");
 
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_RegresarAMenu.png"))); // NOI18N
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_RegresarAMenu2.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnRegresas.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegresas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_RegresarAMenu.png"))); // NOI18N
+        btnRegresas.setContentAreaFilled(false);
+        btnRegresas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnRegresas.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_RegresarAMenu2.png"))); // NOI18N
+        btnRegresas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnRegresasActionPerformed(evt);
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_moverFicha.png"))); // NOI18N
-        jButton2.setContentAreaFilled(false);
-        jButton2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_moverFicha2.png"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnMoverFicha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_moverFicha.png"))); // NOI18N
+        btnMoverFicha.setContentAreaFilled(false);
+        btnMoverFicha.setEnabled(false);
+        btnMoverFicha.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_moverFicha2.png"))); // NOI18N
+        btnMoverFicha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnMoverFichaActionPerformed(evt);
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_sacarFicha.png"))); // NOI18N
-        jButton3.setContentAreaFilled(false);
-        jButton3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_sacarFicha2.png"))); // NOI18N
-        jButton3.setVerifyInputWhenFocusTarget(false);
-
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_tirarCañas.png"))); // NOI18N
-        jButton4.setContentAreaFilled(false);
-        jButton4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_tirarCañas2.png"))); // NOI18N
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnSacarFicha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_sacarFicha.png"))); // NOI18N
+        btnSacarFicha.setContentAreaFilled(false);
+        btnSacarFicha.setEnabled(false);
+        btnSacarFicha.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_sacarFicha2.png"))); // NOI18N
+        btnSacarFicha.setVerifyInputWhenFocusTarget(false);
+        btnSacarFicha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnSacarFichaActionPerformed(evt);
+            }
+        });
+
+        btnTirarCania.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_tirarCañas.png"))); // NOI18N
+        btnTirarCania.setContentAreaFilled(false);
+        btnTirarCania.setEnabled(false);
+        btnTirarCania.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn_tirarCañas2.png"))); // NOI18N
+        btnTirarCania.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTirarCaniaActionPerformed(evt);
             }
         });
 
@@ -153,6 +164,13 @@ public class ventanaTablero extends javax.swing.JFrame {
         lbColorJg4.setForeground(new java.awt.Color(204, 0, 204));
         lbColorJg4.setText("Color");
 
+        btnEmepzar.setText("Empezar");
+        btnEmepzar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEmepzarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -181,13 +199,15 @@ public class ventanaTablero extends javax.swing.JFrame {
                         .addComponent(lbColorJg4))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(416, 416, 416)
-                        .addComponent(jButton1)
+                        .addComponent(btnRegresas)
                         .addGap(12, 12, 12)
-                        .addComponent(jButton3)
+                        .addComponent(btnSacarFicha)
                         .addGap(6, 6, 6)
-                        .addComponent(jButton2)
+                        .addComponent(btnMoverFicha)
                         .addGap(6, 6, 6)
-                        .addComponent(jButton4))
+                        .addComponent(btnTirarCania)
+                        .addGap(54, 54, 54)
+                        .addComponent(btnEmepzar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(499, 499, 499)
                         .addComponent(jLabel2)
@@ -210,47 +230,87 @@ public class ventanaTablero extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbJugador2)
                     .addComponent(lbJugador4))
-                .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbColorJg2)
-                    .addComponent(lbColorJg4))
-                .addGap(90, 90, 90)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(lbMontoApuesta))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbColorJg2)
+                            .addComponent(lbColorJg4))
+                        .addGap(90, 90, 90)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(lbMontoApuesta))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnRegresas)
+                            .addComponent(btnSacarFicha)
+                            .addComponent(btnMoverFicha)
+                            .addComponent(btnTirarCania)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnEmepzar)
+                        .addContainerGap())))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnRegresasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresasActionPerformed
         // TODO add your handling code here:
 	menu.getInstance().setVisible(true);
 	this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnRegresasActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void btnTirarCaniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTirarCaniaActionPerformed
+        blackboard.getInstance().tirarCania();
+        if (blackboard.juego.getValorUltTiro()>0) {
+            this.btnMoverFicha.setEnabled(true);
+            this.btnSacarFicha.setEnabled(true);
+            this.btnTirarCania.setEnabled(false);
+        }else{
+            blackboard.getInstance().cambiarTurno();
+        }
+    }//GEN-LAST:event_btnTirarCaniaActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btnMoverFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoverFichaActionPerformed
+        if (blackboard.juego.getValorUltTiro() > 0) {
+            blackboard.getInstance().moverFicha();
+            this.btnTirarCania.setEnabled(true);
+        }
+    }//GEN-LAST:event_btnMoverFichaActionPerformed
+
+    private void btnEmepzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmepzarActionPerformed
+        if (blackboard.juego.getListaJugador().size()> 1) {
+            blackboard.getInstance().empezarPartida();
+            if (blackboard.juego.getpIniciada()) {
+//                this.btnMoverFicha.setEnabled(true);
+//                this.btnSacarFicha.setEnabled(true);
+                this.btnTirarCania.setEnabled(true);
+                this.btnEmepzar.setEnabled(false);
+                this.btnEmepzar.setVisible(false);
+                this.btnRegresas.setEnabled(false);
+                this.btnRegresas.setVisible(false);
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Jugadores insuficientes");
+        }
+    }//GEN-LAST:event_btnEmepzarActionPerformed
+
+    private void btnSacarFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSacarFichaActionPerformed
+        if (blackboard.juego.getValorUltTiro() > 0) {
+            blackboard.getInstance().sacarFicha();
+            this.btnTirarCania.setEnabled(true);
+        } 
+    }//GEN-LAST:event_btnSacarFichaActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEmepzar;
+    private javax.swing.JButton btnMoverFicha;
+    private javax.swing.JButton btnRegresas;
+    private javax.swing.JButton btnSacarFicha;
+    private javax.swing.JButton btnTirarCania;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel2;
     public javax.swing.JLabel lbColorJg1;
     public javax.swing.JLabel lbColorJg2;

@@ -11,6 +11,9 @@ public class Juego implements Serializable {
 	private List<Jugador> jugadores;
 	private static Juego singletonJuego;
 	private boolean pCreada= false;
+        private boolean pIniciada = false;
+        private int turno = 0;
+        private int valorUltTiro = 0;
 	
 	public Juego(Tablero tablero, int apuesta, int fondoFijo,int numCasillasAspa, List<Jugador> jugadores) {
 		this.tablero = tablero;
@@ -79,4 +82,30 @@ public class Juego implements Serializable {
 	public void setpCreada(boolean pCreada) {
 		this.pCreada = pCreada;
 	}
+        
+        public void emepzarPartida(){
+            this.pIniciada = true;
+        }
+        
+        public boolean getpIniciada(){
+            return this.pIniciada;
+        }
+        public int getTurnp(){
+            return this.turno;
+        }
+        
+        public void setTurno(){
+            this.turno += 1;
+            if (this.turno == this.getListaJugador().size()) {
+                this.turno = 0;
+            }
+        }
+
+    public int getValorUltTiro() {
+        return valorUltTiro;
+    }
+
+    public void setValorUltTiro(int valorUltTiro) {
+        this.valorUltTiro = valorUltTiro;
+    }
 }
