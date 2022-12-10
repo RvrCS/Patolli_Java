@@ -12,7 +12,9 @@ import java.awt.Polygon;
 import java.awt.Rectangle;
 import java.awt.Shape;
 import java.awt.geom.Arc2D;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import javax.swing.JPanel;
 
 public class tableroCanvas extends JPanel{
@@ -22,6 +24,7 @@ public class tableroCanvas extends JPanel{
 	private Graphics2D g2d;
 	private  final int TAMANIOCASILLA = 25;
 	private dibujaCasilla dc;
+        private List<Dibujar> listaDibujar;
 	
 	/**
 	 * Método constructor que recibe e instancia los valores  enviados
@@ -35,6 +38,12 @@ public class tableroCanvas extends JPanel{
 		this.numCasillasAspa = numCasillasAspa;
 		this.anchoPantalla=anchoPantalla/6;
 		this.dc = new dibujaCasilla();
+                this.listaDibujar = new ArrayList<>();
+                listaDibujar.add(new dibujarNormal());
+                listaDibujar.add(new dibujarPropia());
+                listaDibujar.add(new dibujarCentro());
+                listaDibujar.add(new dibujaCircular());
+                listaDibujar.add(new dibujaTriangulo());
 		inicializar();
 	}
 	
@@ -55,17 +64,21 @@ public class tableroCanvas extends JPanel{
 		super.paintComponent(g);
 		this.g2d = (Graphics2D) g;
 		for (Casilla casilla : casillas) {
-			if (casilla.getTipoCasilla().equalsIgnoreCase("centro")) {
-				this.dibujarCentro(g2d, casilla/**, numCasillasAspa**/);
-			} else if (casilla.getTipoCasilla().equalsIgnoreCase("circulo")) {
-				this.dibujarCirculo(g2d, casilla);
-			}else if (casilla.getTipoCasilla().equalsIgnoreCase("triangulo")) {
-				this.dibujarTriangulo(g2d, casilla);
-			 }else if (casilla.getTipoCasilla().equalsIgnoreCase("propia")) {
-				 this.dibujarPropia(g2d, casilla);
-			} else {
-				this.dibujarNormal(g2d, casilla);
-			}
+                    for (Dibujar dibuja : listaDibujar) {
+                        dibuja.dibujar(g2d, casilla, numCasillasAspa, TAMANIOCASILLA);
+                    }
+                    
+//			if (casilla.getTipoCasilla().equalsIgnoreCase("centro")) {
+//				this.dibujarCentro(g2d, casilla/**, numCasillasAspa**/);
+//			} else if (casilla.getTipoCasilla().equalsIgnoreCase("circulo")) {
+//				this.dibujarCirculo(g2d, casilla);
+//			}else if (casilla.getTipoCasilla().equalsIgnoreCase("triangulo")) {
+//				this.dibujarTriangulo(g2d, casilla);
+//			 }else if (casilla.getTipoCasilla().equalsIgnoreCase("propia")) {
+//				 this.dibujarPropia(g2d, casilla);
+//			} else {
+//				this.dibujarNormal(g2d, casilla);
+//			}
 		}
 	}
 	
