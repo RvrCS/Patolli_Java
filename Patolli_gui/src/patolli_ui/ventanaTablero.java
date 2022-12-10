@@ -260,29 +260,27 @@ public class ventanaTablero extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegresasActionPerformed
 
     private void btnTirarCaniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTirarCaniaActionPerformed
-        //blackboard.getInstance().tirarCania();
+        controlBlackboard.getInstance().getFuente("tirarCania", null);
         if (blackboard.juego.getValorUltTiro()>0) {
             this.btnMoverFicha.setEnabled(true);
             this.btnSacarFicha.setEnabled(true);
             this.btnTirarCania.setEnabled(false);
         }else{
-          //  blackboard.getInstance().cambiarTurno();
+            controlBlackboard.getInstance().getFuente("cambiarTurno", null);
         }
     }//GEN-LAST:event_btnTirarCaniaActionPerformed
 
     private void btnMoverFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoverFichaActionPerformed
         if (blackboard.juego.getValorUltTiro() > 0) {
-            //blackboard.getInstance().moverFicha();
+            controlBlackboard.getInstance().getFuente("moverFicha", null);
             this.btnTirarCania.setEnabled(true);
         }
     }//GEN-LAST:event_btnMoverFichaActionPerformed
 
     private void btnEmepzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmepzarActionPerformed
         if (blackboard.juego.getListaJugador().size()> 1) {
-            //blackboard.getInstance().empezarPartida();
+            controlBlackboard.getInstance().getFuente("empezarJuego", null);
             if (blackboard.juego.getpIniciada()) {
-//                this.btnMoverFicha.setEnabled(true);
-//                this.btnSacarFicha.setEnabled(true);
                 this.btnTirarCania.setEnabled(true);
                 this.btnEmepzar.setEnabled(false);
                 this.btnEmepzar.setVisible(false);
@@ -296,7 +294,7 @@ public class ventanaTablero extends javax.swing.JFrame {
 
     private void btnSacarFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSacarFichaActionPerformed
         if (blackboard.juego.getValorUltTiro() > 0) {
-            //blackboard.getInstance().sacarFicha();
+            controlBlackboard.getInstance().getFuente("sacarFicha", null);
             this.btnTirarCania.setEnabled(true);
         } 
     }//GEN-LAST:event_btnSacarFichaActionPerformed

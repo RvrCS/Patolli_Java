@@ -35,8 +35,25 @@ public class controlBlackboard implements IObserver{
     public void notifyObserver(String command, Object source) {
         if(command.equalsIgnoreCase("unirse")){
             System.out.println("Un jugador se ha unido a la partida");
-            System.out.println("Actualizando juego: "+ source.toString());
         }
+        if(command.equalsIgnoreCase("iniciaPartida")){
+            System.out.println("Se ha iniciado la partida.");
+            
+        }
+        if(command.equalsIgnoreCase("turno")){
+            System.out.println("Se ha cambiado el turno");
+        }
+        if(command.equalsIgnoreCase("tirar")){
+            System.out.println("Se han tirado cañas");
+        }
+        if(command.equalsIgnoreCase("sacar")){
+            System.out.println("Se ha sacado una ficha");
+        }
+        if(command.equalsIgnoreCase("mover")){
+            System.out.println("Se ha movido una ficha");
+        }
+        
+        System.out.println("El juego se ha actualizado: "+ source.toString());
     }
     
     public void getFuente(String command, Object source){

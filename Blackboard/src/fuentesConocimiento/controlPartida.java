@@ -23,13 +23,6 @@ public class controlPartida implements IFuenteConocimiento{
         if (command.equalsIgnoreCase("empezarJuego")) {
             this.empezarPartida();
         }
-//        if (command.equalsIgnoreCase("tirarCania")) {
-//            this.tirarCania();
-//        }
-//        if (command.equalsIgnoreCase("sacarFicha")) {
-//            this.sacarFicha();
-//            this.cambiarTurno();
-//        }
         if (command.equalsIgnoreCase("cambiarTurno")) {
             this.cambiarTurno();
         }
@@ -48,24 +41,17 @@ public class controlPartida implements IFuenteConocimiento{
     
     public void empezarPartida(){
         blackboard.juego.empezarPartida();
-        System.out.println("NOTIFICADO: Se ha empezado la partida");
+        System.out.println("NOTIFICAR: Se ha empezado la partida");
+        
+        blackboard.notifyObservers("iniciaPartida", blackboard.juego);
     }
     
-//    public void tirarCania(){
-//        Random rad = new Random();
-//        int valor = rad.nextInt(6);
-//        blackboard.juego.setValorUltTiro(valor);
-//        String nombre = blackboard.juego.getListaJugador().get(blackboard.juego.getTurnp()).getNombre();
-//        System.out.println("NOTIFICADO: "+"Jugador: " + nombre +" Se ha tirad las cañas: " +valor );
-//    }
-//    
-//    public void sacarFicha(){
-//        String nombre = blackboard.juego.getListaJugador().get(blackboard.juego.getTurnp()).getNombre();
-//        System.out.println("NOTIFICADO: "+"Jugador: " + nombre +" Ha sacado una ficha");
-//    }
+
     
     public void cambiarTurno(){
         blackboard.juego.setTurno();
-        System.out.println("NOTIFICADO: Se ha cambiado el turno");
+        System.out.println("NOTIFICAR: Se ha cambiado el turno");
+        
+        blackboard.notifyObservers("turno", blackboard.juego);
     }
 }

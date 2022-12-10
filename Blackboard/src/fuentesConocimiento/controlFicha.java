@@ -21,11 +21,9 @@ public class controlFicha implements IFuenteConocimiento {
         }
         if (command.equalsIgnoreCase("sacarFicha")) {
             this.sacarFicha();
-            //blackboard.getInstance().notifyObservers("cambiarTurno", null);
         }
         if (command.equalsIgnoreCase("moverFicha")) {
             this.moverFicha();
-            //blackboard.getInstance().notifyObservers("cambiarTurno", null);
         }
     }
 
@@ -34,17 +32,22 @@ public class controlFicha implements IFuenteConocimiento {
         int valor = rad.nextInt(6);
         blackboard.juego.setValorUltTiro(valor);
         String nombre = blackboard.juego.getListaJugador().get(blackboard.juego.getTurno()).getNombre();
-        System.out.println("NOTIFICADO: " + "Jugador: " + nombre + " Se ha tirad las cañas: " + valor);
+        System.out.println("NOTIFICAR: " + "Jugador: " + nombre + " ha tirado las cañas: " + valor);
+        
+        blackboard.notifyObservers("tirar", blackboard.juego);
     }
 
     public void sacarFicha() {
         String nombre = blackboard.juego.getListaJugador().get(blackboard.juego.getTurno()).getNombre();
-        System.out.println("NOTIFICADO: " + "Jugador: " + nombre + " Ha sacado una ficha");
+        System.out.println("NOTIFICAR: " + "Jugador: " + nombre + " Ha sacado una ficha");
+        
+        blackboard.notifyObservers("sacar", blackboard.juego);
     }
     
     public void moverFicha(){
         String nombre = blackboard.juego.getListaJugador().get(blackboard.juego.getTurno()).getNombre();
-        System.out.println("NOTIFICADO: " + "Jugador: " + nombre + " Ha movido una ficha "+ blackboard.juego.getValorUltTiro()+" casillas");
+        System.out.println("NOTIFICAR: " + "Jugador: " + nombre + " Ha movido una ficha "+ blackboard.juego.getValorUltTiro()+" casillas");
+        
     }
 
 }
