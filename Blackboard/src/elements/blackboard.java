@@ -8,8 +8,7 @@ import observer.IObserver;
 
 
 public class blackboard implements IObservable{
-   
-   private static blackboard bb;
+    
    public static Juego juego = Juego.getInstance();
 
     public blackboard() {
@@ -62,11 +61,5 @@ public class blackboard implements IObservable{
             observer.notifyObserver(command, source);
         }
     }
-   
-    public static blackboard getInstance(){
-        if (bb == null) {
-            bb = new blackboard();
-        }
-        return bb;
-    }
+
 }

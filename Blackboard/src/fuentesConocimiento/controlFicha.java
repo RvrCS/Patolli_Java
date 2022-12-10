@@ -21,11 +21,11 @@ public class controlFicha implements IFuenteConocimiento {
         }
         if (command.equalsIgnoreCase("sacarFicha")) {
             this.sacarFicha();
-            blackboard.getInstance().notifyObservers("cambiarTurno", null);
+            //blackboard.getInstance().notifyObservers("cambiarTurno", null);
         }
         if (command.equalsIgnoreCase("moverFicha")) {
             this.moverFicha();
-            blackboard.getInstance().notifyObservers("cambiarTurno", null);
+            //blackboard.getInstance().notifyObservers("cambiarTurno", null);
         }
     }
 

@@ -17,6 +17,7 @@ import observer.IObserver;
 public class controlBlackboard implements IObserver{
 
     private List<IFuenteConocimiento> fuentesC = new ArrayList<>();
+    private static controlBlackboard singletonControlBlackboard;
     
     public controlBlackboard(){
         this.inicializar();
@@ -32,11 +33,27 @@ public class controlBlackboard implements IObserver{
     
     @Override
     public void notifyObserver(String command, Object source) {
+        if(command.equalsIgnoreCase("unirse")){
+            System.out.println("Un jugador se ha unido a la partida");
+            System.out.println("Actualizando juego: "+ source.toString());
+        }
+    }
+    
+    public void getFuente(String command, Object source){
         for (IFuenteConocimiento fuente : fuentesC) {
             fuente.updateBlackboard(command, source);
         }
     }
     
-
+    public static controlBlackboard getInstance(){
+        if(singletonControlBlackboard == null){
+            singletonControlBlackboard = new controlBlackboard();
+        }
+        
+        return singletonControlBlackboard;
+        
+    }
+    
+    
     
 }

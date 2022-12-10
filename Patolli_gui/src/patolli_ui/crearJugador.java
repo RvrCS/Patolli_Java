@@ -1,11 +1,11 @@
 package patolli_ui;
 
-import elements.blackboard;
+import elements.controlBlackboard;
 import entidades.Juego;
 import entidades.Jugador;
 
 public class crearJugador extends javax.swing.JFrame {
-//    private blackboard b = new blackboard();
+    
     private static crearJugador singeltonCJ;
     private String color;
     crearPartida cP = new crearPartida();
@@ -137,7 +137,7 @@ public class crearJugador extends javax.swing.JFrame {
 //        System.out.println(jugador.getFichas().toString());
 
         
-        blackboard.getInstance().añadirJugador(jugador);
+        controlBlackboard.getInstance().getFuente("unirJugador", jugador);
 
         ventanaTablero.getInstance().pintarTablero();
         ventanaTablero.getInstance().lbJugador1.setText(Juego.getInstance().getListaJugador().get(0).getNombre());

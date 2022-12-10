@@ -5,7 +5,6 @@
  */
 package fuentesConocimiento;
 
-import elements.blackboard;
 import entidades.Juego;
 import entidades.Jugador;
 import java.util.Random;
@@ -38,9 +37,13 @@ public class controlPartida implements IFuenteConocimiento{
     
     public void unirsePartida(Object obj){
         Jugador jugador = (Jugador)obj;
+        
         blackboard.juego.addJugador(jugador);
         
-        System.out.println("NOTIFICADO: Jugador "+ jugador.getNombre() + " se unio a la partida!");
+        System.out.println("NOTIFICAR: Jugador "+ jugador.getNombre() + " se unio a la partida!");
+        
+        blackboard.notifyObservers("unirse", blackboard.juego);
+        
     }
     
     public void empezarPartida(){

@@ -14,7 +14,7 @@ import entidades.Juego;
  */
 public interface IFuenteConocimiento {
     
-
+    public blackboard blackboard = new blackboard();
     
     public void updateBlackboard(String command, Object obj);
     
