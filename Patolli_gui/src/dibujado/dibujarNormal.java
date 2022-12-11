@@ -14,7 +14,7 @@ import java.awt.Rectangle;
  *
  * @author joshi
  */
-public class dibujarNormal implements Dibujar {
+public class dibujarNormal implements IDibujar {
 
     @Override
     public void dibujar(Graphics2D g2d, Casilla casilla, int numCasillasAspa, int TAMANIOCASILLA) {

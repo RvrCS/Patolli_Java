@@ -6,7 +6,7 @@ import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.awt.Rectangle;
 
-public class dibujaTriangulo implements Dibujar {
+public class dibujaTriangulo implements IDibujar {
 
     @Override
     public void dibujar(Graphics2D g2d, Casilla casilla, int numCasillasAspa, int TAMANIOCASILLA) {

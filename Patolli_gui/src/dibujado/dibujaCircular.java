@@ -16,7 +16,7 @@ import java.awt.geom.Arc2D;
  *
  * @author joshi
  */
-public class dibujaCircular implements Dibujar {
+public class dibujaCircular implements IDibujar {
 
     @Override
     public void dibujar(Graphics2D g2d, Casilla casilla, int numCasillasAspa, int TAMANIOCASILLA) {

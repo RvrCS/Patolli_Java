@@ -23,8 +23,7 @@ public class tableroCanvas extends JPanel{
 	private int anchoPantalla;
 	private Graphics2D g2d;
 	private  final int TAMANIOCASILLA = 25;
-	private dibujaCasilla dc;
-        private List<Dibujar> listaDibujar;
+        private List<IDibujar> listaDibujar;
 	
 	/**
 	 * Método constructor que recibe e instancia los valores  enviados
@@ -37,7 +36,6 @@ public class tableroCanvas extends JPanel{
 		this.casillas = casillas;
 		this.numCasillasAspa = numCasillasAspa;
 		this.anchoPantalla=anchoPantalla/6;
-		this.dc = new dibujaCasilla();
                 this.listaDibujar = new ArrayList<>();
                 listaDibujar.add(new dibujarNormal());
                 listaDibujar.add(new dibujarPropia());
@@ -64,21 +62,10 @@ public class tableroCanvas extends JPanel{
 		super.paintComponent(g);
 		this.g2d = (Graphics2D) g;
 		for (Casilla casilla : casillas) {
-                    for (Dibujar dibuja : listaDibujar) {
+                    for (IDibujar dibuja : listaDibujar) {
                         dibuja.dibujar(g2d, casilla, numCasillasAspa, TAMANIOCASILLA);
                     }
                     
-//			if (casilla.getTipoCasilla().equalsIgnoreCase("centro")) {
-//				this.dibujarCentro(g2d, casilla/**, numCasillasAspa**/);
-//			} else if (casilla.getTipoCasilla().equalsIgnoreCase("circulo")) {
-//				this.dibujarCirculo(g2d, casilla);
-//			}else if (casilla.getTipoCasilla().equalsIgnoreCase("triangulo")) {
-//				this.dibujarTriangulo(g2d, casilla);
-//			 }else if (casilla.getTipoCasilla().equalsIgnoreCase("propia")) {
-//				 this.dibujarPropia(g2d, casilla);
-//			} else {
-//				this.dibujarNormal(g2d, casilla);
-//			}
 		}
 	}
 	
@@ -264,55 +251,5 @@ public class tableroCanvas extends JPanel{
 	public void setCasillas(LinkedList<Casilla> casillas) {
 		this.casillas = casillas;
 	}
-	
-	/**
-	 * Metodo que dibuja exclusivamente la casilla del centro, mediante los parametros recibidos
-	 * @param g2d
-	 * @param casilla
-	 * @param numCasillasAspa 
-	 */
-	public void dibujarCentro(Graphics2D g2d,Casilla casilla/**, int numCasillasAspa**/) {
-		this.dc.dibujarCentro(g2d, casilla, numCasillasAspa, TAMANIOCASILLA);
-		
-		
-	}
-	
-	/**
-	 * Metodo que dibuja exclusivamente el final de las aspas de el tablero, mediante los parametros recibidos
-	 * @param g2d
-	 * @param casilla 
-	 */
-	    public void dibujarCirculo(Graphics2D g2d,Casilla casilla) {
-			dc.dibujarCirculo(g2d, casilla, TAMANIOCASILLA, numCasillasAspa);
-	}
-	
-	/**
-	 * Metodo que dibuja exclusivamente los triangulos del tablero, mediante los parametros recibidos
-	 * @param g2d
-	 * @param casilla 
-	 */
-	public void dibujarTriangulo(Graphics2D g2d,Casilla casilla) {
-		dc.dibujarTriangulo(g2d, casilla, TAMANIOCASILLA);
 
-	}
-	
-	/**
-	 * Metodo que dibuja la casilla exclusiva del jugador, mediante los parametros establecidos
-	 * @param g2d
-	 * @param casilla 
-	 */
-	public void dibujarPropia(Graphics2D g2d,Casilla casilla) {
-		dc.dibujarPropia(g2d, casilla, TAMANIOCASILLA);
-
-	}
-	
-	/**
-	 * Metodo que dibuja exclusivamente todas las casillas normales del tablero, mediante los parametros recibidos
-	 * @param g2d
-	 * @param casilla 
-	 */
-	public void dibujarNormal(Graphics2D g2d,Casilla casilla) {
-		dc.dibujarNormal(g2d, casilla, TAMANIOCASILLA);
-
-	}
 }
